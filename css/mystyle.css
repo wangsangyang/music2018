@@ -1,0 +1,69 @@
+@charset "utf-8";
+html,body,h1,h2,h3,h4,h5,h6,hr,p,ul,ol,li,form,img,dl,dt,dd,table,th,td,blockquote,fieldset,div,strong,label,em,i,b,strong,pre,legend,button,input,textarea,select,address,cite,dfn,var,code,kbd,samp,small,sup,sub, article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary, time, mark, audio, video,a,span{ margin:0; padding:0; font-weight: normal; font-style: normal; box-sizing:border-box; overflow-scrolling: touch; -webkit-overflow-scrolling: touch; -webkit-tap-highlight-color: rgba(255,255,255,0); tap-highlight-color: rgba(255,255,255,0); }
+ul,ol,li{list-style:none;}
+a{text-decoration:none; cursor: default; }
+img{ border:0; display: block; }
+table{border-collapse:collapse; border-spacing: 0; }
+input,select,textarea,button{ outline:none; resize: none; }
+*:focus{outline:none}
+input{ -webkit-appearance: none; }
+html,body{ color: #fff; font-size: 12px; }
+a{ color: #fff; font-size: 12px; }
+
+.clearfix{ *zoom: 1; }
+.clearfix:after{ content: ""; display: block; clear: both; height: 0; visibility: hidden; }
+
+.mask-page{ position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.52); }
+/* 首页 */
+.page-index{ width: 1200px; height: 800px; margin: auto; background: url(../images/bg-page.jpeg) no-repeat center top; background-size: 100% auto; position: relative; }
+/* 搜索框 */
+.page-index .section-search{ position: fixed; top: 30%; left: 50%; border: solid 1px rgba(148, 185, 105, 0.85); margin-left: -307px; }
+.page-index .search-box{ float: left; }
+.page-index .search-box .search-key{ display: block; float: left; width: 450px; height: 40px; border: 0; color: #fff; font-size: 12px; background: url(../images/icon-search.png) no-repeat 10px center; background-size: 20px 20px; padding: 0 10px 0 40px; }
+.page-index .search-box .search-btn{ display: block; float: left; width: 85px; height: 40px; border: 0; color: #fff; font-size: 12px; background: #050505; text-align: center; cursor: pointer; }
+/* 筛选条件 */
+.page-index .filter-box{ float: left; width: 80px; height: 100%; }
+.page-index .filter-box .filter-handle{ height: 40px; line-height: 40px; background-color: #8bc34a; cursor: pointer; text-align: center; }
+.page-index .filter-box .filter-handle .text{ display: inline-block; }
+.page-index .filter-box .filter-handle .icon-arrow-down{ display: inline-block; width: 12px; height: 12px; margin-left: 5px; background-image: url(../images/icon-arrow-down.png); background-repeat: no-repeat; background-position: center center; background-size: 10px 6px; vertical-align: -2px; }
+.page-index .filter-box .filter-bodyer{ display: none; position: absolute; left: 0; width: 100%; }
+.page-index .filter-box.open .filter-bodyer{ display: block; }
+.page-index .filter-box .tab-header{ background-color: #a2a1a1; }
+.page-index .filter-box .tab-header .menu{ display: block; float: left; width: 25%; line-height: 30px; text-align: center; cursor: pointer; }
+.page-index .filter-box .tab-header .menu:hover{ background-color: #aaa; }
+.page-index .filter-box .tab-header .menu.active{ background-color: #fff; color: #aaa; }
+.page-index .filter-box .tab-bodyer{ background-color: rgba(162,161,161,0.6); }
+.page-index .filter-box .tab-bodyer .tab-cont{ display: none; padding: 10px 20px 20px 65px; }
+.page-index .filter-box .tab-bodyer .tab-cont.active{ display: block; }
+.page-index .filter-box .tab-bodyer .menu{ display: block; float: left; width: 130px; cursor: pointer; padding: 3px 0; }
+.page-index .filter-box .tab-bodyer .menu:hover{ color: #eee; }
+.page-index .section-bar{ position: fixed; left: 0; bottom: 60px; text-align: center; width: 100%; }
+.page-index .section-bar .icon{ display: inline-block; width: 82px; height: 82px; background: url(../images/bg1.png) no-repeat center top; background-size: 100% auto; cursor: pointer; }
+.page-index .section-bar .text{ display: block; padding-top: 4px; }
+.page-index .copyright{ position: fixed; left: 0; bottom: 14px; text-align: center; color: #888; width: 100%; }
+
+/* 注册页 */
+.page-register{ width: 1200px; height: 800px; margin: auto; background: url(../images/bg-page.jpeg) no-repeat center top; background-size: 100% auto; position: relative; }
+.page-register .section-top{ position: relative; }
+.page-register .section-top .left{ display: inline-block; padding: 36px 0 0 84px; }
+.page-register .section-top .logo{ display: block; width: 106px; }
+.page-register .section-top .right{ float: right; padding: 28px 74px 0 0; }
+.page-register .section-top .right a{ cursor: pointer; }
+.page-register .section-top .link-register{ display: inline-block; width: 90px; line-height: 40px; background-color: #8BC34A; text-align: center; margin-left: 3px; }
+.page-register .section-bar{ position: absolute; left: 240px; top: 238px; }
+.page-register .section-bar .icon{ display: block; width: 215px; height: 215px; background: url(../images/bg1.png) no-repeat center top; background-size: 100% auto;}
+.page-register .section-register{ position: absolute; right: 220px; top: 170px; background: rgba(170,170,170,0.55); width: 410px; height: 445px; padding: 15px 0 0 40px; }
+.page-register .section-register .title{ font-size: 16px; color: #fff; text-indent: -1em; padding-bottom: 15px; }
+.page-register .section-register dl{ position: relative; }
+.page-register .section-register dd{ position: absolute; bottom: 4px; right: 44px; }
+.page-register .section-register label{ display: block; padding: 18px 0 10px; }
+.page-register .section-register .input{ width: 290px; height: 30px; padding: 0 2px; border: solid 1px #fff; background: none; font-size: 12px; color: #fff; }
+.page-register .section-register .list-yzm .input{ width: 200px; }
+.page-register .section-register .send-yzm{ display: block; width: 80px; height: 30px; line-height: 30px; border: solid 1px #fff; text-align: center; position: absolute; bottom: 0; right: 78px; cursor: pointer; }
+.page-register .section-register .icon-gou{ display: block; width: 22px; height: 22px; border: solid 1px #8BC34A; border-radius: 50%; background: url(../images/icon-gou.png) no-repeat center center; background-size: 100% auto; }
+.page-register .section-register .input::-webkit-input-placeholder{ color: #bbb; }
+.page-register .section-register .input:-moz-placeholder{ color: #bbb; }
+.page-register .section-register .input:-ms-input-placeholder{ color: #bbb; }
+.page-register .section-register .submit-bnts{ padding: 34px 0 0 110px; }
+.page-register .section-register .submit-bnts .btn{ display: inline-block; width: 90px; line-height: 30px; background-color: #8BC34A; text-align: center; cursor: pointer; }
+
