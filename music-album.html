@@ -1,0 +1,191 @@
+<!DOCTYPE HTML>
+<html>
+<head lang="en">
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="format-detection" content="email=no">
+    <meta http-equiv="Content-Type" charset="UTF-8">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="viewport" content="width=device-width,height=device-height,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no"/>
+    <title>音乐专辑</title>
+    <link rel="stylesheet" type="text/css" href="css/mystyle.css" />
+</head>
+<body>
+
+<div class="page-music-album">
+
+    <header class="section-top">
+        <div class="left"><img class="logo" src="images/logo.png"></div>
+
+        <section class="section-search-music">
+            <div class="search-box">
+                <input type="text" class="search-key" readonly="readonly">
+                <input type="button" class="search-btn" value="搜索">
+                <div class="item">
+                    <!--<span class="list"><i class="close"></i><i class="text">吉他</i></span>-->
+                </div>
+            </div>
+            <div class="filter-box">
+                <dl>
+                    <dt class="filter-handle"><i class="text">筛 选</i><i class="icon-arrow-down"></i></dt>
+                    <dt class="filter-bodyer">
+                        <div class="tab-header clearfix">
+                            <span class="menu active">场景</span>
+                            <span class="menu">风格</span>
+                            <span class="menu">情绪</span>
+                            <span class="menu">乐器</span>
+                        </div>
+                        <ul class="tab-bodyer">
+                            <li class="tab-cont active clearfix">
+                                <span class="menu">酒吧</span>
+                                <span class="menu">酒吧</span>
+                                <span class="menu">酒吧</span>
+                                <span class="menu">酒吧</span>
+                                <span class="menu">酒吧</span>
+                                <span class="menu">酒吧</span>
+                                <span class="menu">酒吧</span>
+                            </li>
+                            <li class="tab-cont clearfix">
+                                <span class="menu">摇滚</span>
+                                <span class="menu">摇滚</span>
+                                <span class="menu">摇滚</span>
+                                <span class="menu">摇滚</span>
+                                <span class="menu">摇滚</span>
+                                <span class="menu">摇滚</span>
+                                <span class="menu">摇滚</span>
+                                <span class="menu">摇滚</span>
+                                <span class="menu">摇滚</span>
+                            </li>
+                            <li class="tab-cont clearfix">
+                                <span class="menu">兴奋</span>
+                                <span class="menu">兴奋</span>
+                                <span class="menu">欢乐</span>
+                                <span class="menu">兴奋</span>
+                                <span class="menu">兴奋</span>
+                                <span class="menu">轻音乐</span>
+                                <span class="menu">兴奋</span>
+                                <span class="menu">兴奋</span>
+                                <span class="menu">兴奋</span>
+                                <span class="menu">兴奋</span>
+                            </li>
+                            <li class="tab-cont clearfix">
+                                <span class="menu">吉他</span>
+                                <span class="menu">吉他</span>
+                                <span class="menu">吉他</span>
+                                <span class="menu">吉他</span>
+                                <span class="menu">吉他</span>
+                                <span class="menu">吉他</span>
+                            </li>
+                        </ul>
+                    </dt>
+                </dl>
+            </div>
+        </section>
+
+        <div class="right">
+            <a class="shopingcar" href="#">&nbsp;</a>
+            <a href="#">个人中心</a>
+            |
+            <a class="" href="#">退出</a>
+        </div>
+    </header>
+
+
+    <section class="section-album clearfix">
+        <article class="left">
+            <ul>
+                <li class="row-1">Siren Label Production</li>
+                <li class="row-2">
+                    <dl class="clearfix">
+                        <dt><img src="images/bg2.png"></dt>
+                        <dd>
+                            <h3>Siren Songs Imagine Version</h3>
+                            <span>by Jonny Whint.</span>
+                        </dd>
+                    </dl>
+                </li>
+                <li class="row-3">
+                    <span class="next">听下一首</span>
+                    <span class="check">查看专辑</span>
+                    <span class="shopingcar"></span>
+                </li>
+                <li class="row-4"><span class="progress" style="width:70%;"></span></li>
+            </ul>
+        </article>
+        <article class="right">
+            <ul>
+                <li class="row-1">关键词</li>
+                <li class="row-2">
+                    <span>Bright</span>
+                    <span>Vocal</span>
+                    <span>Male</span>
+                    <span>Great</span>
+                    <span>Bright</span>
+                    <span>Bright</span>
+                    <span>Vocal</span>
+                    <span>Male</span>
+                    <span>Great</span>
+                    <span>Bright</span>
+                </li>
+                <li class="row-3">
+                    <label>其他版本</label>
+                    <dl class="check">
+                        <dt></dt>
+                        <dd>
+                            <span class="shopingcar"></span>
+                        </dd>
+                    </dl>
+                </li>
+                <li class="row-4">
+                    <label>速度</label>
+                    <span class="progress"><i class="icon-handle"></i></span>
+                    <span class="info">102BPM</span>
+                </li>
+            </ul>
+        </article>
+    </section>
+
+
+</div>
+
+
+
+<script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
+<script type="text/javascript" src="js/myjs.js"></script>
+<script>    $(function () {
+    /* 点击筛选按钮 */
+    $('.filter-box .filter-handle').on('click', function () {
+        var $filterbox = $(this).closest('.filter-box');
+        var isopen = $filterbox.hasClass('open');
+        $filterbox[isopen?'removeClass':'addClass']('open');
+    });
+    /* 选择tab */
+    $('.filter-box .tab-header .menu').hover(function () {
+        var index = $(this).index();
+        var text = $(this).text();
+        $(this).addClass('active').siblings().removeClass('active');
+        $('.filter-box .tab-bodyer .tab-cont').eq(index).addClass('active').siblings().removeClass('active');
+    });
+
+    /* 选择小项 */
+    $('.filter-box .tab-bodyer .menu').on('click',function () {
+        var text = $(this).text();
+        var random = Math.random();
+        var list = '<span class="list" data-random="'+random+'"><i class="close"></i><i class="text">'+text+'</i></span>';
+        if( !$(this).hasClass('active') ){
+            $(this).addClass('active');
+            $(this).attr('data-random',random);
+            $('.section-search-music .search-box .item').append(list);
+        }
+    });
+    /* 删除选择的小项 */
+    $('.section-search-music').on('click','.search-box .close',function () {
+        var $list = $(this).closest('.list');
+        var data_random = $list.attr('data-random');
+        $('.filter-box .tab-bodyer .menu[data-random="'+data_random+'"]').removeClass('active');
+        $list.remove();
+    });
+});
+</script>
+</body>
+</html>

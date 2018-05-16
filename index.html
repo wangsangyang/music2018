@@ -13,12 +13,22 @@
 <body>
 
 <div class="page-index">
-    <div class="mask-page"></div>
 
-    <section class="section-search">
+    <header class="section-top">
+        <div class="left"><img class="logo" src="images/logo.png"></div>
+        <div class="right">
+            <a class="link-login" href="login.html">登录</a>
+            <a class="link-register" href="register.html">免费注册</a>
+        </div>
+    </header>
+
+    <section class="section-search-music">
         <div class="search-box">
-            <input type="text" class="search-key">
+            <input type="text" class="search-key" readonly="readonly">
             <input type="button" class="search-btn" value="搜索">
+            <div class="item">
+                <!--<span class="list"><i class="close"></i><i class="text">吉他</i></span>-->
+            </div>
         </div>
         <div class="filter-box">
             <dl>
@@ -54,28 +64,16 @@
                         <li class="tab-cont clearfix">
                             <span class="menu">兴奋</span>
                             <span class="menu">兴奋</span>
-                            <span class="menu">兴奋</span>
-                            <span class="menu">兴奋</span>
                             <span class="menu">欢乐</span>
-                            <span class="menu">兴奋</span>
-                            <span class="menu">兴奋</span>
-                            <span class="menu">兴奋</span>
-                            <span class="menu">乐观</span>
-                            <span class="menu">兴奋</span>
                             <span class="menu">兴奋</span>
                             <span class="menu">兴奋</span>
                             <span class="menu">轻音乐</span>
                             <span class="menu">兴奋</span>
                             <span class="menu">兴奋</span>
                             <span class="menu">兴奋</span>
-                            <span class="menu">复杂</span>
-                            <span class="menu">兴奋</span>
-                            <span class="menu">兴奋</span>
                             <span class="menu">兴奋</span>
                         </li>
                         <li class="tab-cont clearfix">
-                            <span class="menu">吉他</span>
-                            <span class="menu">吉他</span>
                             <span class="menu">吉他</span>
                             <span class="menu">吉他</span>
                             <span class="menu">吉他</span>
@@ -90,7 +88,7 @@
     </section>
 
     <section class="section-bar">
-        <a class="icon" href="#"></a>
+        <a class="icon"></a>
         <div class="text">关于塞壬新球</div>
     </section>
 
@@ -104,15 +102,37 @@
 <script type="text/javascript" src="js/myjs.js"></script>
 <script>
     $(function () {
+        /* 点击筛选按钮 */
         $('.filter-box .filter-handle').on('click', function () {
             var $filterbox = $(this).closest('.filter-box');
             var isopen = $filterbox.hasClass('open');
             $filterbox[isopen?'removeClass':'addClass']('open');
         });
+        /* 选择tab */
         $('.filter-box .tab-header .menu').hover(function () {
             var index = $(this).index();
+            var text = $(this).text();
             $(this).addClass('active').siblings().removeClass('active');
             $('.filter-box .tab-bodyer .tab-cont').eq(index).addClass('active').siblings().removeClass('active');
+        });
+
+        /* 选择小项 */
+        $('.filter-box .tab-bodyer .menu').on('click',function () {
+            var text = $(this).text();
+            var random = Math.random();
+            var list = '<span class="list" data-random="'+random+'"><i class="close"></i><i class="text">'+text+'</i></span>';
+            if( !$(this).hasClass('active') ){
+                $(this).addClass('active');
+                $(this).attr('data-random',random);
+                $('.section-search-music .search-box .item').append(list);
+            }
+        });
+        /* 删除选择的小项 */
+        $('.section-search-music').on('click','.search-box .close',function () {
+            var $list = $(this).closest('.list');
+            var data_random = $list.attr('data-random');
+            $('.filter-box .tab-bodyer .menu[data-random="'+data_random+'"]').removeClass('active');
+            $list.remove();
         });
     });
 </script>
