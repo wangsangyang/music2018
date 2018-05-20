@@ -7,7 +7,7 @@
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
     <meta name="viewport" content="width=device-width,height=device-height,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no"/>
-    <title>音乐专辑</title>
+    <title>购物车</title>
     <link rel="stylesheet" type="text/css" href="css/mystyle.css" />
 </head>
 <body>
@@ -82,59 +82,9 @@
         </div>
     </header>
 
-    <section class="section-album clearfix">
-        <article class="left">
-            <ul>
-                <li class="row-1">Siren Label Production</li>
-                <li class="row-2">
-                    <dl class="clearfix">
-                        <dt><img src="images/bg2.png"></dt>
-                        <dd>
-                            <h3>Siren Songs Imagine Version</h3>
-                            <span>by Jonny Whint.</span>
-                        </dd>
-                    </dl>
-                </li>
-                <li class="row-3">
-                    <span class="next">听下一首</span>
-                    <span class="check"><a href="check-album.html">查看专辑</a></span>
-                    <span class="shopingcar"></span>
-                </li>
-                <li class="row-4"><span class="progress" style="width:70%;"></span></li>
-            </ul>
-        </article>
-        <article class="right">
-            <ul>
-                <li class="row-1">关键词</li>
-                <li class="row-2">
-                    <span class="active">Bright</span>
-                    <span>Vocal</span>
-                    <span>Male</span>
-                    <span>Great</span>
-                    <span>Bright</span>
-                    <span>Bright</span>
-                    <span>Vocal</span>
-                    <span>Male</span>
-                </li>
-                <li class="row-3">
-                    <label>其他版本</label>
-                    <select>
-                        <option>主版本</option>
-                        <option>副版本</option>
-                    </select>
-                </li>
-                <li class="row-4">
-                    <label>速度</label>
-                    <span class="progress"><i class="icon-handle" style="left: 12%;"></i></span>
-                    <span class="info">102BPM</span>
-                </li>
-            </ul>
-        </article>
-    </section>
-
-    <!-- start 搜索结果列表 -->
-    <section class="search-result">
-        <h1 class="result-title">其他搜索结果</h1>
+    <!-- start 购物车列表 -->
+    <section class="search-result" style="margin-top: 90px;">
+        <h1 class="result-title">购物车</h1>
             <ul class="thead">
                 <li>
                     <div class="col-1"></div>
@@ -147,7 +97,7 @@
             </ul>
             <ul class="tbody">
                 <li>
-                    <div class="col-1"><i class="icon icon-pause"></i></div>
+                    <div class="col-1"><i class="icon icon-check"></i></div>
                     <div class="col-2">
                         <h3>Siren Songs Imagine Version</h3>
                         <span>by Jonny Whint.</span>
@@ -158,8 +108,9 @@
                     <div class="col-4">2:41</div>
                     <div class="col-5">120</div>
                     <div class="col-6">
+                        <i class="icon icon-pause"></i>
                         <i class="icon icon-store"></i>
-                        <i class="icon icon-shipingcar"></i>
+                        <i class="icon icon-delete"></i>
                     </div>
                     <dl class="types">
                         <dt>关键词</dt>
@@ -185,7 +136,7 @@
                     </dl>
                 </li>
                 <li>
-                    <div class="col-1"><i class="icon icon-pause"></i></div>
+                    <div class="col-1"><i class="icon icon-check checked"></i></div>
                     <div class="col-2">
                         <h3>Siren Songs Imagine Version</h3>
                         <span>by Jonny Whint.</span>
@@ -194,8 +145,9 @@
                     <div class="col-4">2:41</div>
                     <div class="col-5">120</div>
                     <div class="col-6">
+                        <i class="icon icon-pause"></i>
                         <i class="icon icon-store"></i>
-                        <i class="icon icon-shipingcar"></i>
+                        <i class="icon icon-delete"></i>
                     </div>
                     <dl class="types">
                         <dt>关键词</dt>
@@ -221,8 +173,10 @@
                     </dl>
                 </li>
             </ul>
+
+        <div class="bnts-nex"><a class="btn" href="javascript:;">下一步</a></div>
     </section>
-    <!-- end 搜索结果列表 -->
+    <!-- end 购物车列表 -->
 
 
 </div>
@@ -273,6 +227,13 @@ $(function () {
         var $li = $(this).closest('li');
         var isopen = $li.hasClass('open');
         $li[isopen?'removeClass':'addClass']('open');
+    });
+
+    /* check选择按钮 */
+    $('.search-result .icon-check').on('click', function () {
+        var $this = $(this);
+        var ischecked= $this.hasClass('checked');
+        $this[ischecked?'removeClass':'addClass']('checked');
     });
 });
 </script>
