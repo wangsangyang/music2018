@@ -84,24 +84,33 @@
 
     <section class="section-album clearfix">
         <article class="left">
-            <ul>
-                <li class="row-1">Siren Label Production</li>
-                <li class="row-2">
-                    <dl class="clearfix">
-                        <dt><img src="images/bg2.png"></dt>
-                        <dd>
-                            <h3>Siren Songs Imagine Version</h3>
-                            <span>by Jonny Whint.</span>
-                        </dd>
-                    </dl>
-                </li>
-                <li class="row-3">
-                    <span class="next">听下一首</span>
-                    <span class="check"><a href="check-album.html">查看专辑</a></span>
-                    <span class="shopingcar"></span>
-                </li>
-                <li class="row-4"><span class="progress" style="width:70%;"></span></li>
-            </ul>
+            <span class="shopingcar"></span>
+            <dl class="clearfix">
+                <dt>
+                    <div class="imgbox"><img src="images/bg-album.png"></div>
+                    <div class="btns clearfix">
+                        <span class="play-prev"></span>
+                        <span class="play-now"></span>
+                        <span class="play-next"></span>
+                    </div>
+                </dt>
+                <dd>
+                    <h3>Siren Label Production</h3>
+                    <h1>Siren Songs <br>Imagine Version</h1>
+                    <div class="r1">
+                        <span>by Jonny Whint.</span>
+                        <a href="check-album.html">查看专辑</a>
+                    </div>
+                    <div class="drag-progress-bar">
+                        <span class="total-line">
+                            <i class="speed-line" style="width:40%;"></i>
+                            <i class="handle"></i>
+                            <i class="current-time">01:06</i>
+                            <i class="total-time">03:56</i>
+                        </span>
+                    </div>
+                </dd>
+            </dl>
         </article>
         <article class="right">
             <ul>
@@ -112,9 +121,6 @@
                     <span>Male</span>
                     <span>Great</span>
                     <span>Bright</span>
-                    <span>Bright</span>
-                    <span>Vocal</span>
-                    <span>Male</span>
                 </li>
                 <li class="row-3">
                     <label>其他版本</label>
@@ -125,7 +131,11 @@
                 </li>
                 <li class="row-4">
                     <label>速度</label>
-                    <span class="progress"><i class="icon-handle" style="left: 12%;"></i></span>
+                    <div class="drag-progress-bar">
+                        <span class="total-line">
+                            <i class="handle"></i>
+                        </span>
+                    </div>
                     <span class="info">102BPM</span>
                 </li>
             </ul>
@@ -147,7 +157,7 @@
             </ul>
             <ul class="tbody">
                 <li>
-                    <div class="col-1"><i class="icon icon-pause"></i></div>
+                    <div class="col-1"><i class="icon icon-pause playing"></i></div>
                     <div class="col-2">
                         <h3>Siren Songs Imagine Version</h3>
                         <span>by Jonny Whint.</span>
@@ -159,30 +169,32 @@
                     <div class="col-5">120</div>
                     <div class="col-6">
                         <i class="icon icon-store"></i>
-                        <i class="icon icon-shipingcar"></i>
+                        <i class="icon icon-addcart"></i>
                     </div>
-                    <dl class="types">
-                        <dt>关键词</dt>
-                        <dd>
-                            <span>Bright</span>
-                            <span>Vocal</span>
-                            <span>Male</span>
-                            <span>Great</span>
-                            <span>Bright</span>
-                            <span>Bright</span>
-                            <span>Vocal</span>
-                            <span>Male</span>
-                            <span>Vocal</span>
-                        </dd>
-                    </dl>
-                    <dl class="types">
-                        <dt>版本</dt>
-                        <dd>
-                            <span>Full</span>
-                            <span>30s</span>
-                            <span>60s</span>
-                        </dd>
-                    </dl>
+                    <div class="types">
+                        <dl class="key-word">
+                            <dt>关键词</dt>
+                            <dd>
+                                <span class="active">Bright</span>
+                                <span>Vocal</span>
+                                <span>Male</span>
+                                <span>Great</span>
+                                <span>Bright</span>
+                                <span>Bright</span>
+                                <span>Vocal</span>
+                                <span>Male</span>
+                                <span>Vocal</span>
+                            </dd>
+                        </dl>
+                        <dl class="version">
+                            <dt>版本</dt>
+                            <dd>
+                                <span>Full</span>
+                                <span>30s</span>
+                                <span>60s</span>
+                            </dd>
+                        </dl>
+                    </div>
                 </li>
                 <li>
                     <div class="col-1"><i class="icon icon-pause"></i></div>
@@ -197,84 +209,41 @@
                         <i class="icon icon-store"></i>
                         <i class="icon icon-shipingcar"></i>
                     </div>
-                    <dl class="types">
-                        <dt>关键词</dt>
-                        <dd>
-                            <span>Bright</span>
-                            <span>Vocal</span>
-                            <span>Male</span>
-                            <span>Great</span>
-                            <span>Bright</span>
-                            <span>Bright</span>
-                            <span>Vocal</span>
-                            <span>Male</span>
-                            <span>Vocal</span>
-                        </dd>
-                    </dl>
-                    <dl class="types">
-                        <dt>版本</dt>
-                        <dd>
-                            <span>Full</span>
-                            <span>30s</span>
-                            <span>60s</span>
-                        </dd>
-                    </dl>
+                    <div class="types">
+                        <dl class="key-word">
+                            <dt>关键词</dt>
+                            <dd>
+                                <span class="active">Bright</span>
+                                <span>Vocal</span>
+                                <span>Male</span>
+                                <span>Great</span>
+                                <span>Bright</span>
+                                <span>Bright</span>
+                                <span>Vocal</span>
+                                <span>Male</span>
+                                <span>Vocal</span>
+                            </dd>
+                        </dl>
+                        <dl class="version">
+                            <dt>版本</dt>
+                            <dd>
+                                <span>Full</span>
+                                <span>30s</span>
+                                <span>60s</span>
+                            </dd>
+                        </dl>
+                    </div>
                 </li>
             </ul>
     </section>
     <!-- end 搜索结果列表 -->
 
-
 </div>
-
-
 
 <script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
 <script type="text/javascript" src="js/myjs.js"></script>
 <script>
-$(function () {
-    /* 点击筛选按钮 */
-    $('.filter-box .filter-handle').on('click', function () {
-        var $filterbox = $(this).closest('.filter-box');
-        var isopen = $filterbox.hasClass('open');
-        $filterbox[isopen?'removeClass':'addClass']('open');
-    });
-    /* 选择tab */
-    $('.filter-box .tab-header .menu').hover(function () {
-        var index = $(this).index();
-        var text = $(this).text();
-        $(this).addClass('active').siblings().removeClass('active');
-        $('.filter-box .tab-bodyer .tab-cont').eq(index).addClass('active').siblings().removeClass('active');
-    });
 
-    /* 选择小项 */
-    $('.filter-box .tab-bodyer .menu').on('click',function () {
-        var text = $(this).text();
-        var random = Math.random();
-        var list = '<span class="list" data-random="'+random+'"><i class="close"></i><i class="text">'+text+'</i></span>';
-        if( !$(this).hasClass('active') ){
-            $(this).addClass('active');
-            $(this).attr('data-random',random);
-            $('.section-search-music .search-box .item').append(list);
-        }
-    });
-    /* 删除选择的小项 */
-    $('.section-search-music').on('click','.search-box .close',function () {
-        var $list = $(this).closest('.list');
-        var data_random = $list.attr('data-random');
-        $('.filter-box .tab-bodyer .menu[data-random="'+data_random+'"]').removeClass('active');
-        $list.remove();
-    });
-});
-
-$(function () {
-    /* 搜索列表展开、隐藏 */
-    $('.search-result .icon-open').on('click', function () {
-        var $li = $(this).closest('li');
-        var isopen = $li.hasClass('open');
-        $li[isopen?'removeClass':'addClass']('open');
-    });
-});
 </script>
 </body>
 </html>
