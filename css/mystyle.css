@@ -41,19 +41,19 @@ a{ color: #fff; font-size: 14px; }
 
 /* 搜索音乐框 */
 .section-search-music{ width: 648px; margin: auto; position: relative; }
-.section-search-music .search-box{ float: left; height: 40px; border: solid 1px #7da700; background-color: rgba(17,23,32,0.8); position: relative; }
+.section-search-music .search-box{ float: left; height: 40px; border: solid 1px #7da700; background-color: rgba(17,23,32,0.8); position: relative; z-index: 98; }
 .section-search-music .search-box .search-key{ display: block; float: left; width: 425px; height: 100%; border: 0; color: #fff; background: url(../images/icon-search.png) no-repeat 12px center; padding: 2px 0 0 40px; }
 .section-search-music .search-box .search-btn{ display: block; float: left; width: 90px; height: 100%; border: 0; color: rgba(240,240,240,0.7); background: none; text-align: center; cursor: pointer; background: url(../images/icon-enter.png) no-repeat 60px center; padding-right: 10px; }
 .section-search-music .search-box .item{ position: absolute; left: 38px; top: 9px; }
-.section-search-music .search-box .item .list{ display: block; float: left; padding: 0 26px; margin: 0 0 5px 8px; line-height: 22px; background-color: #7da700; border-radius: 20px; position: relative; }
+.section-search-music .search-box .item .list{ display: block; float: left; padding: 0 26px; margin: 0 0 5px 8px; line-height: 22px; background-color: #9abb00; border-radius: 20px; position: relative; }
 .section-search-music .search-box .item .list .close{ display: block; width: 13px; height: 13px; background: url(../images/icon-close.png) no-repeat left center; cursor: pointer; position: absolute; top: -3px; right: 5px; }
 /* 筛选条件 */
 .section-search-music .filter-box{ float: left; width: 130px; height: 100%; }
-.section-search-music .filter-box .filter-handle{ height: 40px; line-height: 40px; background-color: #7da700; cursor: pointer; text-align: center; }
+.section-search-music .filter-box .mask{ display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0,0,0,0.5); z-index: 97; }
+.section-search-music .filter-box .filter-handle{ height: 40px; line-height: 40px; background-color: #9abb00; cursor: pointer; text-align: center; position: relative; z-index: 98; }
 .section-search-music .filter-box .filter-handle .text{ display: inline-block; }
 .section-search-music .filter-box .filter-handle .icon-arrow-down{ display: inline-block; width: 8px; height: 6px; margin-left: 12px; background-image: url(../images/icon-arrow-down.png); background-repeat: no-repeat; background-position: center center; vertical-align: 2px; }
-.section-search-music .filter-box .filter-bodyer{ display: none; position: absolute; left: 0; width: 100%; background-color: rgba(17,23,32,0.8); }
-.section-search-music .filter-box.open .filter-bodyer{ display: block; }
+.section-search-music .filter-box .filter-bodyer{ display: none; position: absolute; left: 0; width: 100%; background-color: rgba(17,23,32,0.8); box-shadow: 0 0 16px #000; z-index: 99; }
 .section-search-music .filter-box .tab-header{ border-bottom: solid 1px rgba(255,255,255,0.1); font-size: 16px; }
 .section-search-music .filter-box .tab-header .menu{ display: block; float: left; width: 25%; line-height: 48px; text-align: center; cursor: pointer; color: #29eb97; }
 .section-search-music .filter-box .tab-header .menu:hover{ background-color: rgba(255,255,255,0.15); }
@@ -63,6 +63,8 @@ a{ color: #fff; font-size: 14px; }
 .section-search-music .filter-box .tab-bodyer .menu{ display: block; float: left; width: 25%; cursor: pointer; padding: 8px 0; text-align: center; }
 .section-search-music .filter-box .tab-bodyer .menu:hover{ color: #29eb97; }
 .section-search-music .filter-box .tab-bodyer .menu.active{ color: #29eb97; }
+.section-search-music .filter-box.open .mask{ display: block; }
+.section-search-music .filter-box.open .filter-bodyer{ display: block; }
 
 /* 首页 */
 .page-index .section-search-music{ padding-top: 65px; }
@@ -94,9 +96,59 @@ a{ color: #fff; font-size: 14px; }
 .page-register .forget-password{ padding: 20px 0 0; text-align: center; }
 .page-register .forget-password a{ display: inline-block; margin: 0 8px; text-decoration: underline; font-size: 12px; }
 
+/* 搜索结果 */
+.search-result{ width: 1115px; padding: 20px 52px 10px 44px; margin: auto; background-color: rgba(17,23,32,0.8); }
+.search-result .result-title{ font-size: 16px; padding-bottom: 10px; }
+.search-result .thead{ color: #E5E4E4; border-bottom: solid 1px rgba(255,255,255,0.2); padding: 0 0 16px; }
+.search-result .thead li{ display: flex; color: rgba(255,255,255,0.7); }
+.search-result .thead .col-1{ width: 80px; }
+.search-result .thead .col-2{ width: 355px; padding-left: 104px; }
+.search-result .thead .col-3{ width: 120px; }
+.search-result .thead .col-4{ width: 155px; }
+.search-result .thead .col-5{ flex: 1; }
+.search-result .thead .col-ordernumber{ width: 130px; }
+.search-result .thead .col-6{ width: 205px; text-align: center; }
+.search-result .tbody li{ display: flex; align-items: center; flex-wrap: wrap; font-size: 14px; border-bottom: solid 1px rgba(255,255,255,0.2); padding: 9px 0 2px; }
+.search-result .tbody li:nth-last-child(1){ border-bottom: 0; }
+.search-result .tbody .col-1{ width: 80px; text-align: center; }
+.search-result .tbody .col-2{ width: 355px; }
+.search-result .tbody .col-2 h3{ font-size: 18px; }
+.search-result .tbody .col-2 span{ display: block; padding: 2px 0 11px; font-size: 12px; color: rgba(255,255,255,0.7); }
+.search-result .tbody .col-3{ width: 120px; }
+.search-result .tbody .col-4{ width: 155px; font-size: 16px; }
+.search-result .tbody .col-5{ flex: 1; font-size: 16px; }
+.search-result .tbody .col-ordernumber{ width: 130px; }
+.search-result .tbody .col-6{ width: 205px; text-align: center; }
+.search-result .tbody .icon{ display: inline-block; background-position: center; background-repeat: no-repeat; cursor: pointer; }
+.search-result .tbody .icon-open{ width: 16px; height: 16px; background-image: url(../images/icon-open.png); }
+.search-result .tbody .col-1 .icon-pause{ width: 18px; height: 23px; background-image: url(../images/icon-pause.png); }
+.search-result .tbody .col-1 .icon-pause.active{ background-image: url(../images/icon-pause-active.png); }
+.search-result .tbody .col-1 .icon-checkbox{ width: 12px; height: 12px; border: solid 1px #fff; border-radius: 1px; }
+.search-result .tbody .col-1 .icon-checkbox.active{ border: 0; background-image: url(../images/icon-checkbox-active.png); }
+.search-result .tbody .col-6 .icon{ width: 31px; height: 31px; margin-left: 14px; background-color: #fff; border-radius: 50%; }
+.search-result .tbody .col-6 .icon-store{ background-image: url(../images/icon-store.png); }
+.search-result .tbody .col-6 .icon-store.active{ background-image: url(../images/icon-store-active.png); }
+.search-result .tbody .col-6 .icon-addcart{ background-image: url(../images/icon-addcart.png); }
+.search-result .tbody .col-6 .icon-pause{ background-image: url(../images/icon-pause1.png); }
+.search-result .tbody .col-6 .icon-pause.active{ background-image: url(../images/icon-pause1-active.png); }
+.search-result .tbody .col-6 .icon-delete{ background-image: url(../images/icon-delete.png); }
+.search-result .tbody .col-6 .icon-delete.active{ background-image: url(../images/icon-delete-active.png); }
+.search-result .tbody .types{ display: none; width: 100%; padding: 15px 0 15px 80px; overflow: hidden; position: relative; }
+.search-result .tbody .types .key-word{ width: 560px; border-right: solid 1px rgba(255,255,255,0.2); }
+.search-result .tbody .types .version{ flex: 1; margin-left: 72px; }
+.search-result .tbody .types dt{ font-size: 16px; }
+.search-result .tbody .types dd{ padding-top: 8px; }
+.search-result .tbody .types span{ display: block; float: left; width: 76px; height: 24px; line-height: 24px; text-align: center; border: solid 1px #fff; border-radius: 15px; margin: 0 5px 5px 0; font-size: 14px; cursor: pointer; }
+.search-result .tbody .types span.active{ border: solid 1px #7da700; color: #7da700; }
+.search-result .tbody li.open .types{ display: flex; }
+.search-result .tbody li.open .icon-open{ background-image: url(../images/icon-opened.png); }
+/* 下一步按钮 */
+.bnts-nex{ padding: 35px 40px 40px; text-align: right; }
+.bnts-nex .btn{ display: inline-block; width: 130px; line-height: 40px; background-color: #7da700; text-align: center; background-image: url(../images/icon-arrow-next.png); background-position: 95px center; background-repeat: no-repeat; }
 
 /* 音乐专辑页 */
-.page-music-album{ background-image: url(../images/bg-page1.jpg);}
+.page-music-album{ background-image: url(../images/bg-page1.jpg); }
+.page-music-album .search-result{ margin-top: 20px; box-shadow: 0 0 16px #000; }
 .page-music-album .section-search-music{ float: left; margin-left: 14px; padding-top: 30px; }
 .page-music-album .section-album{ width: 1115px; height: 265px; margin: auto; margin-top: 35px; }
 .page-music-album .section-album .drag-progress-bar .total-line{ display: block; height: 6px; background: url(../images/total-line.png) repeat-x left center; border-radius: 20px; position: relative; }
@@ -104,7 +156,6 @@ a{ color: #fff; font-size: 14px; }
 .page-music-album .section-album .drag-progress-bar .handle{ display: block; width: 18px; height: 18px; background: url(../images/icon-handle.png) no-repeat center; position: absolute; top: -6px; left: 39%; cursor: pointer; }
 .page-music-album .section-album .drag-progress-bar .current-time{ display: block; position: absolute; top: 10px; left: 0; font-size: 12px; color: #7da700; }
 .page-music-album .section-album .drag-progress-bar .total-time{ display: block; position: absolute; top: 10px; right: 0; font-size: 12px; color: #7da700; }
-
 .page-music-album .section-album .left{ float: left; width: 490px; height: 100%; padding: 25px 30px 0 20px; background-color: rgba(17,23,32,0.8); box-shadow: 0 0 16px #000; position: relative; }
 .page-music-album .section-album .left .shopingcar{ display: block; width: 30px; height: 30px; background-color: #7da700; border-radius: 50%; position: absolute; top: 30px; right: 30px; cursor: pointer; background-repeat: no-repeat; background-position: center 9px; background-image: url(../images/icon-shopingcar.png); background-size: 55% auto; }
 .page-music-album .section-album .left .shopingcar:after{ content: "+"; display: block; position: absolute; top: -2px; right: 5px; }
@@ -139,49 +190,38 @@ a{ color: #fff; font-size: 14px; }
 .page-music-album .section-album .right .row-4 .info{ display: inline-block; }
 .page-music-album .section-album .right .row-4{ padding-top: 10px; }
 .page-music-album .section-album .right .row-4 .drag-progress-bar{ width: 278px; display: inline-block; margin: 0 10px 0 20px; }
-/* 搜索结果 */
-.page-music-album .search-result{ width: 1115px; padding: 20px 52px 10px 44px; margin: auto; margin-top: 20px; background-color: rgba(17,23,32,0.8); box-shadow: 0 0 16px #000; }
-.page-music-album .search-result .result-title{ font-size: 16px; padding-bottom: 10px; }
-.page-music-album .search-result .thead{ color: #E5E4E4; border-bottom: solid 1px rgba(255,255,255,0.2); padding: 0 0 16px; }
-.page-music-album .search-result .thead li{ display: flex; color: rgba(255,255,255,0.7); }
-.page-music-album .search-result .thead .col-1{ width: 80px; }
-.page-music-album .search-result .thead .col-2{ width: 355px; padding-left: 104px; }
-.page-music-album .search-result .thead .col-3{ width: 120px; }
-.page-music-album .search-result .thead .col-4{ width: 155px; }
-.page-music-album .search-result .thead .col-5{ flex: 1; }
-.page-music-album .search-result .thead .col-ordernumber{ width: 130px; }
-.page-music-album .search-result .thead .col-6{ width: 205px; text-align: center; }
-.page-music-album .search-result .tbody li{ display: flex; align-items: center; flex-wrap: wrap; font-size: 14px; border-bottom: solid 1px rgba(255,255,255,0.2); padding: 9px 0 2px; }
-.page-music-album .search-result .tbody li:nth-last-child(1){ border-bottom: 0; }
-.page-music-album .search-result .tbody .col-1{ width: 80px; text-align: center; }
-.page-music-album .search-result .tbody .col-2{ width: 355px; }
-.page-music-album .search-result .tbody .col-2 h3{ font-size: 18px; }
-.page-music-album .search-result .tbody .col-2 span{ display: block; padding: 2px 0 11px; font-size: 12px; color: rgba(255,255,255,0.7); }
-.page-music-album .search-result .tbody .col-3{ width: 120px; }
-.page-music-album .search-result .tbody .col-4{ width: 155px; font-size: 16px; }
-.page-music-album .search-result .tbody .col-5{ flex: 1; font-size: 16px; }
-.page-music-album .search-result .tbody .col-ordernumber{ width: 130px; }
-.page-music-album .search-result .tbody .col-6{ width: 205px; }
-.page-music-album .search-result .tbody .icon{ display: inline-block; background-position: center; background-repeat: no-repeat; cursor: pointer; }
-.page-music-album .search-result .tbody .icon-open{ width: 16px; height: 16px; background-image: url(../images/icon-open.png); }
-.page-music-album .search-result .tbody .icon-pause{ width: 18px; height: 23px; background-image: url(../images/icon-pause.png); }
-.page-music-album .search-result .tbody .icon-pause.playing{ background-image: url(../images/icon-playing.png); }
-.page-music-album .search-result .tbody .icon-check{ margin: 0 0 0 17px; border: solid 2px #fff; width: 16px; height: 16px; border-radius: 2px; position: relative; }
-.page-music-album .search-result .tbody .icon-check:after{ content: ""; display: block; width: 16px; height: 16px; position: absolute; right: -4px; top: -2px; }
-.page-music-album .search-result .tbody .icon-check.checked:after{ background: url(../images/icon-gou1.png) no-repeat center; }
-.page-music-album .search-result .tbody .icon-store{ width: 31px; height: 31px; background-image: url(../images/icon-store.png); margin-left: 46px; }
-.page-music-album .search-result .tbody .icon-addcart{ width: 31px; height: 31px; background-image: url(../images/icon-addcart.png); margin-left: 50px; }
-.page-music-album .search-result .tbody .icon-delete{ background-image: url(../images/icon-delete.png); }
-.page-music-album .search-result .tbody .types{ display: none; width: 100%; padding: 15px 0 15px 80px; overflow: hidden; position: relative; }
-.page-music-album .search-result .tbody .types .key-word{ width: 560px; border-right: solid 1px rgba(255,255,255,0.2); }
-.page-music-album .search-result .tbody .types .version{ flex: 1; margin-left: 72px; }
-.page-music-album .search-result .tbody .types dt{ font-size: 16px; }
-.page-music-album .search-result .tbody .types dd{ padding-top: 8px; }
-.page-music-album .search-result .tbody .types span{ display: block; float: left; width: 76px; height: 24px; line-height: 24px; text-align: center; border: solid 1px #fff; border-radius: 15px; margin: 0 5px 5px 0; font-size: 14px; cursor: pointer; }
-.page-music-album .search-result .tbody .types span.active{ border: solid 1px #7da700; color: #7da700; }
-.page-music-album .search-result .tbody li.open .types{ display: flex; }
-.page-music-album .search-result .tbody li.open .icon-open{ background-image: url(../images/icon-opened.png); }
 
+/* 授权成功页 */
+.page-authorization-success{ background-image: url(../images/bg-page1.jpg); }
+.page-authorization-success .section-search-music{ float: left; margin-left: 14px; padding-top: 30px; }
+.page-authorization-success .section-cont1{ width: 1115px; margin: auto; margin-top: 35px; padding: 0 0 30px 0; background-color: rgba(17,23,32,0.8); box-shadow: 0 0 16px #000; }
+.page-authorization-success .section-cont1 .search-result{ background-color: transparent; }
+.page-authorization-success .section-cont1 .search-result .result-title .sub{ color: #7da700; }
+.page-authorization-success .section-cont1 .cont1{ padding: 20px 52px 10px 44px;}
+.page-authorization-success .section-cont1 .cont1 h2{ font-size: 16px; padding: 0 0 20px; border-bottom: solid 1px rgba(255,255,255,0.2); }
+.page-authorization-success .section-cont1 .cont1 h3{ font-size: 16px; padding: 20px 0 18px; }
+.page-authorization-success .section-cont1 .cont1 .bodyer{ display: flex; border-bottom: solid 1px rgba(255,255,255,0.2); padding-bottom: 30px; }
+.page-authorization-success .section-cont1 .cont1 .bodyer dl{ display: flex; align-items: center; font-size: 14px;}
+.page-authorization-success .section-cont1 .cont1 .bodyer dl:nth-child(1){ flex: 1; }
+.page-authorization-success .section-cont1 .cont1 .bodyer dl:nth-child(2){  flex: 1; }
+.page-authorization-success .section-cont1 .cont1 .bodyer dl:nth-child(3){ flex: 0.5;  }
+.page-authorization-success .section-cont1 .cont1 .bodyer dl dt{ padding-right: 25px; }
+.page-authorization-success .section-cont1 .cont1 .bodyer dl a{ margin: 0 6px; }
+.page-authorization-success .section-cont1 .cont1 .bodyer dl .btn2{ display: inline-block; padding: 0 15px; height: 28px; line-height: 26px; text-align: center; border: solid 1px #7da700; color: #7da700; border-radius: 15px; }
+.page-authorization-success .section-cont1 .cont1 .bodyer dl .btn3{ display: inline-block; padding: 0 15px; height: 28px; line-height: 26px; text-align: center; border: solid 1px #7da700; color: #fff; border-radius: 15px; }
+.page-authorization-success .section-cont1 .search-result .thead .col-4{ width: 130px; }
+.page-authorization-success .section-cont1 .search-result .thead .col-5{ padding-left: 26px; }
+.page-authorization-success .section-cont1 .search-result .thead .col-6{ width: 290px; }
+.page-authorization-success .section-cont1 .search-result .tbody select{ display: inline-block; font-size: 14px; width: 86px; height: 24px; border: solid 1px #7da700; border-radius: 15px; color: #7da700; background: none; padding-left: 10px; }
+.page-authorization-success .section-cont1 .search-result .tbody .col-4{ width: 130px; }
+.page-authorization-success .section-cont1 .search-result .tbody .col-6{ width: 290px; }
+.page-authorization-success .section-cont1 .search-result .tbody .col-6 .tag{ display: inline-block; padding: 0 22px; background-color: #7da700; border-radius: 15px; height: 24px; line-height: 24px; margin: 0 6px; }
 
-.bnts-nex{ padding: 60px 30px 0 0; text-align: right; }
-.bnts-nex .btn{ display: inline-block; width: 80px; line-height: 30px; background-color: #7da700; text-align: center; }
+/* 个人中心 */
+.personalCenter-wrap{ width: 965px; height: 535px; margin: auto; margin-top: 60px; padding-left: 205px; background-color: rgba(17,23,32,0.8); position: relative; }
+.personalCenter-wrap .personalCenter-nav{ position: absolute; left: 0; top: 0; width: 205px; height: 100%; background-color: rgba(255,255,255,0.2); }
+.personalCenter-wrap .personalCenter-nav .nav{ position: relative; padding: 25px 0; }
+.personalCenter-wrap .personalCenter-nav .nav::after{ content: ""; display: block; width: 110px; height: 1px; overflow: hidden; background-color: rgba(255,255,255,0.1); position: absolute; top: 0; left: 47px; }
+.personalCenter-wrap .personalCenter-nav .nav a{ display: block; text-align: center; line-height: 40px; margin-top: 1px; }
+.personalCenter-wrap .personalCenter-nav .nav a:hover{ background-color: rgba(255,255,255,0.1); color: #7da700; }
+.personalCenter-wrap .personalCenter-nav .nav a.active{ background-color: rgba(255,255,255,0.1); color: #7da700; }

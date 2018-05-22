@@ -7,12 +7,12 @@
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
     <meta name="viewport" content="width=device-width,height=device-height,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no"/>
-    <title>购物车</title>
+    <title>授权成功</title>
     <link rel="stylesheet" type="text/css" href="css/mystyle.css" />
 </head>
 <body>
 
-<div class="page page-music-album">
+<div class="page page-authorization-success">
 
     <header class="section-top clearfix">
         <div class="left"><img class="logo" src="images/logo.png"></div>
@@ -83,96 +83,88 @@
         </div>
     </header>
 
-    <!-- start 结果列表 -->
-    <section class="search-result" style="margin-top: 35px;">
-        <h1 class="result-title">其他搜索结果</h1>
-        <ul class="thead">
-            <li>
-                <div class="col-1"></div>
-                <div class="col-2">标题</div>
-                <div class="col-3"></div>
-                <div class="col-4">时长</div>
-                <div class="col-5">BPM</div>
-                <div class="col-6">操作</div>
-            </li>
-        </ul>
-        <ul class="tbody">
-            <li>
-                <div class="col-1"><i class="icon icon-checkbox active"></i></div>
-                <div class="col-2">
-                    <h3>Siren Songs Imagine Version</h3>
-                    <span>by Jonny Whint.</span>
-                </div>
-                <div class="col-3"><i class="icon icon-open"></i></div>
-                <div class="col-4">2:41</div>
-                <div class="col-5">120</div>
-                <div class="col-6">
-                    <i class="icon icon-pause"></i>
-                    <i class="icon icon-store"></i>
-                    <i class="icon icon-delete"></i>
-                </div>
-                <div class="types">
-                    <dl class="key-word">
-                        <dt>关键词</dt>
-                        <dd>
-                            <span class="active">Bright</span>
-                            <span>Vocal</span>
-                            <span>Male</span>
-                            <span>Great</span>
-                            <span>Bright</span>
-                            <span>Bright</span>
-                        </dd>
-                    </dl>
-                    <dl class="version">
-                        <dt>版本</dt>
-                        <dd>
-                            <span>Full</span>
-                            <span>30s</span>
-                            <span>60s</span>
-                        </dd>
-                    </dl>
-                </div>
-            </li>
-            <li>
-                <div class="col-1"><i class="icon icon-checkbox"></i></div>
-                <div class="col-2">
-                    <h3>Siren Songs Imagine Version</h3>
-                    <span>by Jonny Whint.</span>
-                </div>
-                <div class="col-3"><i class="icon icon-open"></i></div>
-                <div class="col-4">2:41</div>
-                <div class="col-5">120</div>
-                <div class="col-6">
-                    <i class="icon icon-pause active"></i>
-                    <i class="icon icon-store active"></i>
-                    <i class="icon icon-delete active"></i>
-                </div>
-                <div class="types">
-                    <dl class="key-word">
-                        <dt>关键词</dt>
-                        <dd>
-                            <span class="active">Bright</span>
-                            <span>Vocal</span>
-                            <span>Male</span>
-                            <span>Great</span>
-                            <span>Bright</span>
-                            <span>Bright</span>
-                        </dd>
-                    </dl>
-                    <dl class="version">
-                        <dt>版本</dt>
-                        <dd>
-                            <span>Full</span>
-                            <span>30s</span>
-                            <span>60s</span>
-                        </dd>
-                    </dl>
-                </div>
-            </li>
-        </ul>
-        <div class="bnts-nex"><a class="btn" href="#">下一步</a></div>
+    <section class="section-cont1">
+        <article class="cont1">
+            <h2>授权成功</h2>
+            <h3>您可以选择申请授权书、合同及发票</h3>
+            <div class="bodyer">
+                <dl>
+                    <dt>授权书：</dt>
+                    <dd>
+                        <a class="btn1" href="#">查看电子版</a>
+                        <a class="btn2" href="#">申请纸质版</a>
+                    </dd>
+                </dl>
+                <dl>
+                    <dt>合同书：</dt>
+                    <dd>
+                        <a class="btn2" href="#">查看电子版</a>
+                        <a class="btn1" href="#">申请纸质版</a>
+                    </dd>
+                </dl>
+                <dl>
+                    <dt>发票：</dt>
+                    <dd>
+                        <a class="btn3" href="#">申请发票</a>
+                    </dd>
+                </dl>
+            </div>
+        </article>
+
+        <!-- start 结果列表 -->
+        <section class="search-result">
+            <h1 class="result-title">音乐作品明细： <span class="sub">（您也可以在“个人中心”中查看）</span></h1>
+            <ul class="thead">
+                <li>
+                    <div class="col-1"></div>
+                    <div class="col-2">标题</div>
+                    <div class="col-4">时长</div>
+                    <div class="col-5">版本</div>
+                    <div class="col-6">操作</div>
+                </li>
+            </ul>
+            <ul class="tbody">
+                <li>
+                    <div class="col-1"><i class="icon icon-pause"></i></div>
+                    <div class="col-2">
+                        <h3>Siren Songs Imagine Version</h3>
+                        <span>by Jonny Whint.</span>
+                    </div>
+                    <div class="col-4">2:41</div>
+                    <div class="col-5">
+                        <select>
+                            <option>主版本</option>
+                            <option>副版本</option>
+                        </select>
+                    </div>
+                    <div class="col-6">
+                        <i class="tag">MP3</i>
+                        <i class="tag">WAV</i>
+                        <i class="tag">AIFF</i>
+                    </div>
+                </li>
+                <li>
+                    <div class="col-1"><i class="icon icon-pause active"></i></div>
+                    <div class="col-2">
+                        <h3>Siren Songs Imagine Version</h3>
+                        <span>by Jonny Whint.</span>
+                    </div>
+                    <div class="col-4">2:41</div>
+                    <div class="col-5">
+                        <select>
+                            <option>主版本</option>
+                            <option>副版本</option>
+                        </select>
+                    </div>
+                    <div class="col-6">
+                        <i class="tag">WAV</i>
+                        <i class="tag">AIFF</i>
+                    </div>
+                </li>
+            </ul>
+        </section>
+        <!-- end 结果列表 -->
     </section>
-    <!-- end 结果列表 -->
 
 </div>
 
@@ -181,11 +173,6 @@
 <script type="text/javascript" src="js/myjs.js"></script>
 <script>
 $(function () {
-    /* 点击复选框 */
-    $('.search-result .icon-checkbox').on('click', function () {
-        var isactive = $(this).hasClass('active');
-        $(this)[isactive?'removeClass':'addClass']('active');
-    });
 });
 </script>
 </body>

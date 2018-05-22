@@ -5,6 +5,11 @@ $(function () {
         var isopen = $filterbox.hasClass('open');
         $filterbox[isopen?'removeClass':'addClass']('open');
     });
+    /* 点击背景mask隐藏 */
+    $('.filter-box .mask').on('click', function () {
+        var $filterbox = $(this).closest('.filter-box');
+        $filterbox.removeClass('open');
+    });
     /* 选择tab */
     $('.filter-box .tab-header .menu').hover(function () {
         var index = $(this).index();
