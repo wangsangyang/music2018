@@ -40,7 +40,7 @@ a{ color: #fff; font-size: 14px; }
 .section-top .right .signout{ background-image: url(../images/icon-signout.png); color: #7da700; }
 
 /* 搜索音乐框 */
-.section-search-music{ width: 648px; margin: auto; position: relative; }
+.section-search-music{ width: 648px; margin: auto; position: relative; float: left; margin-left: 14px; padding-top: 30px; }
 .section-search-music .search-box{ float: left; height: 40px; border: solid 1px #7da700; background-color: rgba(17,23,32,0.8); position: relative; z-index: 98; }
 .section-search-music .search-box .search-key{ display: block; float: left; width: 425px; height: 100%; border: 0; color: #fff; background: url(../images/icon-search.png) no-repeat 12px center; padding: 2px 0 0 40px; }
 .section-search-music .search-box .search-btn{ display: block; float: left; width: 90px; height: 100%; border: 0; color: rgba(240,240,240,0.7); background: none; text-align: center; cursor: pointer; background: url(../images/icon-enter.png) no-repeat 60px center; padding-right: 10px; }
@@ -67,7 +67,7 @@ a{ color: #fff; font-size: 14px; }
 .section-search-music .filter-box.open .filter-bodyer{ display: block; }
 
 /* 首页 */
-.page-index .section-search-music{ padding-top: 65px; }
+.page-index .section-search-music{ float: none; margin: auto; padding-top: 65px; }
 .page-index .copyright{ position: fixed; left: 0; bottom: 14px; text-align: center; color: #888; width: 100%; font-size: 12px; color: #2a435e; }
 .page-index .copyright .space{ display: inline-block; width: 4em; }
 
@@ -97,7 +97,7 @@ a{ color: #fff; font-size: 14px; }
 .page-register .forget-password a{ display: inline-block; margin: 0 8px; text-decoration: underline; font-size: 12px; }
 
 /* 搜索结果 */
-.search-result{ width: 1115px; padding: 20px 52px 10px 44px; margin: auto; background-color: rgba(17,23,32,0.8); }
+.search-result{ padding: 20px 52px 10px 44px; margin: auto; }
 .search-result .result-title{ font-size: 16px; padding-bottom: 10px; }
 .search-result .thead{ color: #E5E4E4; border-bottom: solid 1px rgba(255,255,255,0.2); padding: 0 0 16px; }
 .search-result .thead li{ display: flex; color: rgba(255,255,255,0.7); }
@@ -148,9 +148,9 @@ a{ color: #fff; font-size: 14px; }
 
 /* 音乐专辑页 */
 .page-music-album{ background-image: url(../images/bg-page1.jpg); }
-.page-music-album .search-result{ margin-top: 20px; box-shadow: 0 0 16px #000; }
-.page-music-album .section-search-music{ float: left; margin-left: 14px; padding-top: 30px; }
-.page-music-album .section-album{ width: 1115px; height: 265px; margin: auto; margin-top: 35px; }
+.page-music-album .main-content{ padding: 0 50px; }
+.page-music-album .search-result{ margin-top: 20px; box-shadow: 0 0 16px #000; background-color: rgba(17,23,32,0.8); }
+.page-music-album .section-album{ height: 265px; margin-top: 35px; }
 .page-music-album .section-album .drag-progress-bar .total-line{ display: block; height: 6px; background: url(../images/total-line.png) repeat-x left center; border-radius: 20px; position: relative; }
 .page-music-album .section-album .drag-progress-bar .speed-line{ display: block; height: 6px; background: url(../images/speed-line.png) repeat-x left center; border-radius: 20px; }
 .page-music-album .section-album .drag-progress-bar .handle{ display: block; width: 18px; height: 18px; background: url(../images/icon-handle.png) no-repeat center; position: absolute; top: -6px; left: 39%; cursor: pointer; }
@@ -178,7 +178,7 @@ a{ color: #fff; font-size: 14px; }
 .page-music-album .section-album .left .drag-progress-bar{ padding-top: 34px; }
 .page-music-album .section-album .left .row-2 .shopingcar{ width: 30px; border: solid 1px #fff; border-radius: 50%; background: url(../images/icon-shopingcar.png) no-repeat center center; background-size: 60% auto; }
 .page-music-album .section-album .left .row-4{ width: 100%; height: 4px; border: solid 1px #fff; border-left: 0; border-right: 0; position: absolute; bottom: -4px; left: 0; }
-.page-music-album .section-album .right{ float: left; width: 605px; padding: 28px 130px 0 34px; margin-left: 20px; height: 100%; background-color: rgba(17,23,32,0.8); box-shadow: 0 0 16px #000; position: relative; }
+.page-music-album .section-album .right{ float: left; width: 590px; padding: 28px 130px 0 34px; margin-left: 20px; height: 100%; background-color: rgba(17,23,32,0.8); box-shadow: 0 0 16px #000; position: relative; }
 .page-music-album .section-album .right .row-1{ font-size: 16px; }
 .page-music-album .section-album .right .row-2{ font-size: 10px; margin-top: 16px; overflow: hidden; }
 .page-music-album .section-album .right .row-2 span{ display: block; float: left; width: 82px; height: 24px; line-height: 24px; text-align: center; border: solid 1px #fff; border-radius: 15px; margin: 0 5px 5px 0; font-size: 14px; cursor: pointer; }
@@ -193,9 +193,7 @@ a{ color: #fff; font-size: 14px; }
 
 /* 授权成功页 */
 .page-authorization-success{ background-image: url(../images/bg-page1.jpg); }
-.page-authorization-success .section-search-music{ float: left; margin-left: 14px; padding-top: 30px; }
-.page-authorization-success .section-cont1{ width: 1115px; margin: auto; margin-top: 35px; padding: 0 0 30px 0; background-color: rgba(17,23,32,0.8); box-shadow: 0 0 16px #000; }
-.page-authorization-success .section-cont1 .search-result{ background-color: transparent; }
+.page-authorization-success .section-cont1{ width: 1100px; margin: auto; margin-top: 35px; padding: 0 0 30px 0; background-color: rgba(17,23,32,0.8); box-shadow: 0 0 16px #000; }
 .page-authorization-success .section-cont1 .search-result .result-title .sub{ color: #7da700; }
 .page-authorization-success .section-cont1 .cont1{ padding: 20px 52px 10px 44px;}
 .page-authorization-success .section-cont1 .cont1 h2{ font-size: 16px; padding: 0 0 20px; border-bottom: solid 1px rgba(255,255,255,0.2); }
@@ -225,3 +223,6 @@ a{ color: #fff; font-size: 14px; }
 .personalCenter-wrap .personalCenter-nav .nav a{ display: block; text-align: center; line-height: 40px; margin-top: 1px; }
 .personalCenter-wrap .personalCenter-nav .nav a:hover{ background-color: rgba(255,255,255,0.1); color: #7da700; }
 .personalCenter-wrap .personalCenter-nav .nav a.active{ background-color: rgba(255,255,255,0.1); color: #7da700; }
+
+/* 我的收藏页 */
+.page-store{ background-image: url(../images/bg-page1.jpg); }
