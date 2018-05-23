@@ -29,7 +29,7 @@
     <section class="section-search-music">
         <div class="search-box">
             <input type="text" class="search-key">
-            <input type="button" class="search-btn" value="搜索">
+            <input type="button" class="search-btn" value="搜索" id="search-btn">
             <div class="item">
                 <span class="list"><i class="close"></i><i class="text">吉他</i></span>
             </div>
@@ -91,7 +91,11 @@
 <script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
 <script type="text/javascript" src="js/myjs.js"></script>
 <script>
-
+$(function () {
+    $('#search-btn').on('click',function () {
+        window.location.href = 'album-play.html';
+    });
+});
 </script>
 </body>
 </html>

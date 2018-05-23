@@ -45,4 +45,10 @@ $(function () {
         var isopen = $li.hasClass('open');
         $li[isopen?'removeClass':'addClass']('open');
     });
+    /* 订单列表查看详情展开、隐藏 */
+    $('.search-result .detail').on('click', function () {
+        var $li = $(this).closest('li');
+        var isopen = $li.hasClass('open');
+        $li[isopen?'removeClass':'addClass']('open');
+    });
 });
