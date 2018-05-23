@@ -7,7 +7,7 @@
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
     <meta name="viewport" content="width=device-width,height=device-height,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no"/>
-    <title>购物车</title>
+    <title>支付</title>
     <link rel="stylesheet" type="text/css" href="css/mystyle.css" />
 </head>
 <body>
@@ -83,97 +83,10 @@
         </div>
     </header>
 
-    <!-- start 结果列表 -->
+
     <div class="main-content">
-        <section class="search-result" style="margin-top: 35px;">
-            <h1 class="result-title">其他搜索结果</h1>
-            <ul class="thead">
-                <li>
-                    <div class="col-1"></div>
-                    <div class="col-2">标题</div>
-                    <div class="col-3"></div>
-                    <div class="col-4">时长</div>
-                    <div class="col-5">BPM</div>
-                    <div class="col-6">操作</div>
-                </li>
-            </ul>
-            <ul class="tbody">
-                <li>
-                    <div class="col-1"><i class="icon icon-checkbox active"></i></div>
-                    <div class="col-2">
-                        <h3>Siren Songs Imagine Version</h3>
-                        <span>by Jonny Whint.</span>
-                    </div>
-                    <div class="col-3"><i class="icon icon-open"></i></div>
-                    <div class="col-4">2:41</div>
-                    <div class="col-5">120</div>
-                    <div class="col-6">
-                        <i class="icon icon-pause"></i>
-                        <i class="icon icon-store"></i>
-                        <i class="icon icon-delete"></i>
-                    </div>
-                    <div class="types">
-                        <dl class="key-word">
-                            <dt>关键词</dt>
-                            <dd>
-                                <span class="active">Bright</span>
-                                <span>Vocal</span>
-                                <span>Male</span>
-                                <span>Great</span>
-                                <span>Bright</span>
-                                <span>Bright</span>
-                            </dd>
-                        </dl>
-                        <dl class="version">
-                            <dt>版本</dt>
-                            <dd>
-                                <span>Full</span>
-                                <span>30s</span>
-                                <span>60s</span>
-                            </dd>
-                        </dl>
-                    </div>
-                </li>
-                <li>
-                    <div class="col-1"><i class="icon icon-checkbox"></i></div>
-                    <div class="col-2">
-                        <h3>Siren Songs Imagine Version</h3>
-                        <span>by Jonny Whint.</span>
-                    </div>
-                    <div class="col-3"><i class="icon icon-open"></i></div>
-                    <div class="col-4">2:41</div>
-                    <div class="col-5">120</div>
-                    <div class="col-6">
-                        <i class="icon icon-pause active"></i>
-                        <i class="icon icon-store active"></i>
-                        <i class="icon icon-delete active"></i>
-                    </div>
-                    <div class="types">
-                        <dl class="key-word">
-                            <dt>关键词</dt>
-                            <dd>
-                                <span class="active">Bright</span>
-                                <span>Vocal</span>
-                                <span>Male</span>
-                                <span>Great</span>
-                                <span>Bright</span>
-                                <span>Bright</span>
-                            </dd>
-                        </dl>
-                        <dl class="version">
-                            <dt>版本</dt>
-                            <dd>
-                                <span>Full</span>
-                                <span>30s</span>
-                                <span>60s</span>
-                            </dd>
-                        </dl>
-                    </div>
-                </li>
-            </ul>
-            <div class="bnts-nex"><a class="btn" href="waiting-pay.html">下一步</a></div>
-        </section>
-        <!-- end 结果列表 -->
+        <div class="bnts-nex"><a class="btn" href="waiting-pay.html">下一步</a></div>
+
     </div>
 
 </div>
@@ -183,11 +96,7 @@
 <script type="text/javascript" src="js/myjs.js"></script>
 <script>
 $(function () {
-    /* 点击复选框 */
-    $('.search-result .icon-checkbox').on('click', function () {
-        var isactive = $(this).hasClass('active');
-        $(this)[isactive?'removeClass':'addClass']('active');
-    });
+
 });
 </script>
 </body>
