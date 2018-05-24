@@ -13,7 +13,7 @@ a{ color: #fff; font-size: 14px; }
 .clearfix{ *zoom: 1; }
 .clearfix:after{ content: ""; display: block; clear: both; height: 0; visibility: hidden; }
 
-.page{ background-image: url(../images/bg-page1.jpg); background-color: #343946; background-repeat: no-repeat; background-position: center top; background-size: 100% auto; position: relative; user-select:none; }
+.page{ min-width: 1200px; background-image: url(../images/bg-page1.jpg); background-color: #343946; background-repeat: no-repeat; background-position: center top; background-size: 100% auto; position: relative; user-select:none; }
 .wrap{ width: 1200px; min-height: 750px; margin: auto; }
 
 /* 顶部右侧的登录、注册按钮 */
