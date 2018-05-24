@@ -13,8 +13,8 @@ a{ color: #fff; font-size: 14px; }
 .clearfix{ *zoom: 1; }
 .clearfix:after{ content: ""; display: block; clear: both; height: 0; visibility: hidden; }
 
-.page{ min-width: 1200px; background-image: url(../images/bg-page1.jpg); background-color: #343946; background-repeat: no-repeat; background-position: center top; background-size: 100% auto; position: relative; user-select:none; }
-.wrap{ width: 1200px; min-height: 750px; margin: auto; }
+.page{ min-width: 1115px; background-image: url(../images/bg-page1.jpg); background-color: #343946; background-repeat: no-repeat; background-position: center top; background-size: 100% auto; position: relative; user-select:none; }
+.wrap{ width: 1115px; min-height: 750px; margin: auto; }
 
 /* 顶部右侧的登录、注册按钮 */
 .section-header{ position: relative; }
@@ -31,7 +31,7 @@ a{ color: #fff; font-size: 14px; }
 
 /* 顶部logo、个人中心、退出 */
 .section-top{ position: relative; }
-.section-top .left{ display: block; float: left; padding: 30px 0 0 44px; }
+.section-top .left{ display: block; float: left; padding: 30px 0 0; }
 .section-top .logo{ display: block; width: 170px; }
 .section-top .right{ float: left; padding: 40px 0 0; }
 .section-top .right a{ display: block; float: left; margin-left: 26px; padding: 0 0 0 24px; background-repeat: no-repeat; background-position: left center; position: relative; }
@@ -157,7 +157,7 @@ a{ color: #fff; font-size: 14px; }
 
 /* 音乐专辑页 */
 .page-music-album{  }
-.page-music-album .main-content{ padding: 0 50px; }
+.page-music-album .main-content{ }
 .page-music-album .search-result{ margin-top: 20px; box-shadow: 0 0 16px #000; background-color: rgba(17,23,32,0.8); }
 .page-music-album .section-album{ height: 265px; margin-top: 35px; }
 .page-music-album .section-album .drag-progress-bar .total-line{ display: block; height: 6px; background: url(../images/total-line.png) repeat-x left center; border-radius: 20px; position: relative; }
@@ -187,7 +187,7 @@ a{ color: #fff; font-size: 14px; }
 .page-music-album .section-album .left .drag-progress-bar{ padding-top: 34px; }
 .page-music-album .section-album .left .row-2 .shopingcar{ width: 30px; border: solid 1px #fff; border-radius: 50%; background: url(../images/icon-shopingcar.png) no-repeat center center; background-size: 60% auto; }
 .page-music-album .section-album .left .row-4{ width: 100%; height: 4px; border: solid 1px #fff; border-left: 0; border-right: 0; position: absolute; bottom: -4px; left: 0; }
-.page-music-album .section-album .right{ float: left; width: 590px; padding: 28px 130px 0 34px; margin-left: 20px; height: 100%; background-color: rgba(17,23,32,0.8); box-shadow: 0 0 16px #000; position: relative; }
+.page-music-album .section-album .right{ float: left; width: 605px; padding: 28px 130px 0 34px; margin-left: 20px; height: 100%; background-color: rgba(17,23,32,0.8); box-shadow: 0 0 16px #000; position: relative; }
 .page-music-album .section-album .right .row-1{ font-size: 16px; }
 .page-music-album .section-album .right .row-2{ font-size: 10px; margin-top: 16px; overflow: hidden; }
 .page-music-album .section-album .right .row-2 span{ display: block; float: left; width: 82px; height: 24px; line-height: 24px; text-align: center; border: solid 1px #fff; border-radius: 15px; margin: 0 5px 5px 0; font-size: 14px; cursor: pointer; }
@@ -202,7 +202,7 @@ a{ color: #fff; font-size: 14px; }
 
 /* 授权成功页 */
 .page-authorization-success{ }
-.page-authorization-success .section-cont1{ width: 1100px; margin: auto; margin-top: 35px; padding: 0 0 30px 0; background-color: rgba(17,23,32,0.8); box-shadow: 0 0 16px #000; }
+.page-authorization-success .section-cont1{ margin-top: 35px; padding: 0 0 30px 0; background-color: rgba(17,23,32,0.8); box-shadow: 0 0 16px #000; }
 .page-authorization-success .section-cont1 .search-result .result-title .sub{ color: #7da700; }
 .page-authorization-success .section-cont1 .cont1{ padding: 20px 52px 10px 44px;}
 .page-authorization-success .section-cont1 .cont1 h2{ font-size: 16px; padding: 0 0 20px; border-bottom: solid 1px rgba(255,255,255,0.2); }
