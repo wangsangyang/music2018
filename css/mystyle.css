@@ -307,31 +307,74 @@ a{ color: #fff; font-size: 14px; }
 .page-personadata .personalCenter-main .cont2 dl.company dd{ padding: 20px 0 15px; }
 
 /* 选择支付方式页 */
-.page-payment .section-cont{ margin-top: 55px; padding: 0 0 30px 0; background-color: rgba(17,23,32,0.8); box-shadow: 0 0 16px #000; }
-.page-payment .section-cont .cont1{ padding: 30px 52px 10px 44px;}
-.page-payment .section-cont .cont1 h2{ font-size: 20px; padding: 0 0 16px; }
-.page-payment .section-cont .cont1 .header{ display: flex; font-size: 16px; padding-bottom: 28px; border-bottom: solid 1px rgba(255,255,255,0.2); }
-.page-payment .section-cont .cont1 .header .song-name{}
-.page-payment .section-cont .cont1 .header .song-number{ flex: 1; padding-left: 55px; }
-.page-payment .section-cont .cont1 .header .song-number .color{ color: #7da700; }
-.page-payment .section-cont .cont1 .header .more{ text-align: center; color: #7da700; cursor: pointer; }
+.page-payment .section-cont{ margin-top: 55px; padding: 30px 52px 40px 44px; background-color: rgba(17,23,32,0.8); box-shadow: 0 0 16px #000; position: relative; }
+.page-payment .section-cont .title{ font-size: 20px; padding: 0 0 16px; }
+.page-payment .section-cont .header{ display: flex; font-size: 16px; padding-bottom: 28px; border-bottom: solid 1px rgba(255,255,255,0.2); }
+.page-payment .section-cont .header .song-name{}
+.page-payment .section-cont .header .song-number{ flex: 1; padding-left: 55px; }
+.page-payment .section-cont .header .song-number .color{ color: #7da700; }
+.page-payment .section-cont .header .detail{ text-align: center; color: #7da700; cursor: pointer; background: url(../images/icon-detail.png) no-repeat right 9px; padding-right: 15px; }
+.page-payment .section-cont .bodyer{ display: none; }
+.page-payment .section-cont.open .bodyer{ display: block; }
+.page-payment .section-cont .bodyer .row-balance{ display: flex; padding: 60px 0 0; }
+.page-payment .section-cont .bodyer .row-balance .left{ padding: 10px 100px 10px 0; position: relative; }
+.page-payment .section-cont .bodyer .row-balance .left:after{ content: ""; display: block; width: 1px; background-color: rgba(255,255,255,0.2); position: absolute; right: 0; top: 0px; bottom: 0px; }
+.page-payment .section-cont .bodyer .row-balance .left dt{ font-size: 20px; padding: 0 0 15px; }
+.page-payment .section-cont .bodyer .row-balance .left dd{ font-size: 16px; color: #7da700; margin: 0 0 -5px -5px; }
+.page-payment .section-cont .bodyer .row-balance .left dd .s1{ font-size: 22px; color: #fff; }
+.page-payment .section-cont .bodyer .row-balance .left dd .s2{ font-size: 25px; }
+.page-payment .section-cont .bodyer .row-balance .right{ padding: 0 0 0 90px; }
+.page-payment .section-cont .bodyer .row-balance .right dl{ display: flex; padding: 9px 0; font-size: 17px; }
+.page-payment .section-cont .bodyer .row-balance .right dl dt{ width: 86px; text-align: right; }
+.page-payment .section-cont .bodyer .row-balance .right dl dd{ border-bottom: solid 1px rgba(255,255,255,0.2); }
+.page-payment .section-cont .bodyer .row-balance .right dl dd input{ width: 210px; background: none; border: 0; color: #fff; font-size: 17px; padding: 0 10px; }
+.page-payment .section-cont .bodyer .payment-way{ padding: 45px 0 15px; }
+.page-payment .section-cont .bodyer .payment-way dt{ font-size: 20px; padding: 0 0 15px; }
+.page-payment .section-cont .bodyer .payment-way dd{ display: flex; }
+.page-payment .section-cont .bodyer .payment-way dd .list{ display: flex; padding: 4px 12px; border: solid 1px transparent; color: #fff; border-radius: 25px; font-size: 15px; cursor: pointer; align-items: center; margin-right: 125px; }
+.page-payment .section-cont .bodyer .payment-way dd .list .text{ margin-left: 9px; }
+.page-payment .section-cont .bodyer .payment-way dd .list.active{ border: solid 1px #7da700; color: #7da700; }
+.page-payment .section-cont .pay-money{ position: absolute; top: 190px; right: 70px; text-align: center; }
+.page-payment .section-cont .pay-money:after{ content: ""; display: block; width: 1px; background-color: rgba(255,255,255,0.2); position: absolute; left: -65px; top: 6px; bottom: 30px; }
+.page-payment .section-cont .pay-money .r1{ font-size: 17px; text-indent: -62px; }
+.page-payment .section-cont .pay-money .r2{ font-size: 16px; color: #fff; margin-bottom: -5px; padding: 12px 0 18px; }
+.page-payment .section-cont .pay-money .r2 .s1{ font-size: 22px; color: #fff; display: inline-block; margin: 0 5px 0 -3px; }
+.page-payment .section-cont .pay-money .r2 .s2{ font-size: 50px; }
+.page-payment .section-cont .pay-money .r2 .s3{ font-size: 30px; }
+.page-payment .section-cont .pay-money .r3 .icon-checkbox{ display: inline-block; width: 12px; height: 12px; border: solid 1px #fff; border-radius: 1px; margin-right: 5px; }
+.page-payment .section-cont .pay-money .r3 .icon-checkbox.active{ border: 0; background-image: url(../images/icon-checkbox-active.png); }
+.page-payment .section-cont .pay-money .r3 a{ color: #7da700; text-decoration: underline; }
+.page-payment .section-cont .pay-money .r4{ padding: 26px 0 0; }
+.page-payment .section-cont .pay-money .r4 .btn { display: inline-block; width: 130px; line-height: 40px; background-color: #7da700; text-align: center;  background-repeat: no-repeat; }
+.page-payment .section-cont .pay-money .r4 .btn-prev{ background-color: #74797d; background-image: url(../images/icon-prev.png); background-position: 28px center; margin-right: 35px; }
 
-.page-payment .section-cont .cont1 .bodyer{  }
-.page-payment .section-cont .cont1 .bodyer .row1{ display: flex; padding: 60px 0 0; }
-.page-payment .section-cont .cont1 .bodyer .row1 .left{ padding: 10px 105px 10px 0; position: relative; }
-.page-payment .section-cont .cont1 .bodyer .row1 .left:after{ content: ""; display: block; width: 1px; background-color: rgba(255,255,255,0.2); position: absolute; right: 0; top: 0px; bottom: 0px; }
-.page-payment .section-cont .cont1 .bodyer .row1 .left dt{ font-size: 20px; padding: 0 0 15px; }
-.page-payment .section-cont .cont1 .bodyer .row1 .left dd{ font-size: 16px; color: #7da700; margin-bottom: -5px; }
-.page-payment .section-cont .cont1 .bodyer .row1 .left dd .s1{ font-size: 22px; color: #fff; }
-.page-payment .section-cont .cont1 .bodyer .row1 .left dd .s2{ font-size: 25px; }
-.page-payment .section-cont .cont1 .bodyer .row1 .right{ padding: 0 0 0 100px; }
-.page-payment .section-cont .cont1 .bodyer .row1 .right dl{ display: flex; padding: 9px 0; font-size: 17px; }
-.page-payment .section-cont .cont1 .bodyer .row1 .right dl dt{ width: 86px; text-align: right; }
-.page-payment .section-cont .cont1 .bodyer .row1 .right dl dd{ border-bottom: solid 1px rgba(255,255,255,0.2); }
-.page-payment .section-cont .cont1 .bodyer .row1 .right dl dd input{  background: none; border: 0; color: #fff; font-size: 17px; padding: 0 10px; }
+.page-payment .section-cont .waiting-money{ position: absolute; top: 275px; right: 60px; }
+.page-payment .section-cont .waiting-money:after{ content: ""; display: block; width: 1px; background-color: rgba(255,255,255,0.2); position: absolute; left: -100px; top: -65px; bottom: -5px; }
+.page-payment .section-cont .waiting-money .r1{ font-size: 17px; padding-left: 22px; color: #7da700; }
+.page-payment .section-cont .waiting-money .r2{ font-size: 16px; color: #fff; margin-bottom: -5px; margin-left: -5px; padding: 12px 0 18px; }
+.page-payment .section-cont .waiting-money .r2 .s1{ font-size: 22px; color: #fff; display: inline-block; margin: 0 5px 0 -3px; }
+.page-payment .section-cont .waiting-money .r2 .s2{ font-size: 50px; }
+.page-payment .section-cont .waiting-money .r2 .s3{ font-size: 30px; }
+.page-payment .section-cont .waiting-money .r3{ padding: 26px 0 0; }
+.page-payment .section-cont .waiting-money .r3 .btn { display: inline-block; width: 130px; line-height: 40px; background-color: #7da700; text-align: center;  background-repeat: no-repeat; }
+.page-payment .section-cont .waiting-money .r3 .btn-prev{ background-color: #74797d; background-image: url(../images/icon-prev.png); background-position: 28px center; margin-right: 35px; }
+.page-payment .section-cont .waiting-money .r3 .btn-next{ background-image: url(../images/icon-arrow-next.png); background-position: 95px center; }
 
-.page-payment .section-cont .cont1 .bodyer .row2{ padding: 45px 0 15px; }
-.page-payment .section-cont .cont1 .bodyer .row2 dt{ font-size: 20px; padding: 0 0 15px; }
-.page-payment .section-cont .cont1 .bodyer .row2 dd{ display: flex; }
-.page-payment .section-cont .cont1 .bodyer .row2 dd .way{ display: flex; padding: 4px 12px; border: solid 1px #7da700; color: #7da700; border-radius: 25px; font-size: 15px; cursor: pointer; align-items: center; margin-right: 125px; }
-.page-payment .section-cont .cont1 .bodyer .row2 dd .way .text{ margin-left: 9px; }
+.page-payment .section-cont .bodyer .row-type{ padding: 25px 0 28px; width: 600px; border-bottom: solid 1px rgba(255,255,255,0.2); }
+.page-payment .section-cont .bodyer .row-type dt{ font-size: 18px; padding: 0 0 15px; }
+.page-payment .section-cont .bodyer .row-type dd{ }
+.page-payment .section-cont .bodyer .row-type dd .list{ display: inline-block; text-align: center; padding: 4px 0; width: 146px; border: solid 1px transparent; color: #fff; border-radius: 25px; font-size: 15px; cursor: pointer; }
+.page-payment .section-cont .bodyer .row-type dd .list.active{ border: solid 1px #7da700; color: #7da700; }
+.page-payment .section-cont .bodyer .row-type dd .list:nth-last-child(1){ margin-right: 0; }
+
+.page-payment .section-cont .bodyer .row-scope{ display: flex; padding: 25px 0 28px; width: 600px; }
+.page-payment .section-cont .bodyer .row-scope .scope-star-time{ flex: 1.2; }
+.page-payment .section-cont .bodyer .row-scope dt{ font-size: 18px; padding: 0 0 15px; }
+.page-payment .section-cont .bodyer .row-scope dd{ }
+.page-payment .section-cont .bodyer .row-scope dd .list{ display: inline-block; text-align: center; padding: 4px 0; width: 146px; border: solid 1px transparent; color: #fff; border-radius: 25px; font-size: 15px; cursor: pointer; }
+.page-payment .section-cont .bodyer .row-scope dd .list.active{ border: solid 1px #7da700; color: #7da700; }
+.page-payment .section-cont .bodyer .row-scope dd .list:nth-last-child(1){ }
+.page-payment .section-cont .bodyer .row-scope dd .icon-calendar{ width: 17px; height: 19px; display: inline-block; margin-left: 15px; vertical-align: -3px; background: url(../images/icon-calendar.png) no-repeat center; cursor: pointer; }
+
+.page-payment .section-cont .bodyer .row-scope .scope-area{ flex: 1; }
+.page-payment .section-cont .bodyer .row-scope .scope-area .list:nth-last-child(1){ width: 120px; }

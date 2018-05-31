@@ -7,12 +7,12 @@
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
     <meta name="viewport" content="width=device-width,height=device-height,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no"/>
-    <title>待支付</title>
+    <title>等待付款</title>
     <link rel="stylesheet" type="text/css" href="css/mystyle.css" />
 </head>
 <body>
 
-<div class="page page-music-album">
+<div class="page page-payment">
 <div class="wrap">
 
     <header class="section-top clearfix">
@@ -84,11 +84,65 @@
         </div>
     </header>
 
+    <section class="section-cont open">
+        <h2 class="title">填写授权信息</h2>
+        <dl class="header">
+            <dd class="song-name">Siren Songs  Imaqice Version</dd>
+            <dd class="song-number">等<i class="color">3</i>首作品</dd>
+            <dd class="detail">展开详情</dd>
+        </dl>
+        <article class="bodyer">
 
-    <div class="main-content">
-        <div class="bnts-nex"><a class="btn" href="payment.html">下一步</a></div>
+            <dl class="row-type">
+                <dt>请选择音乐用途</dt>
+                <dd>
+                    <span class="list active">商业广告/宣传片</span>
+                    <span class="list">游戏/AP</span>
+                    <span class="list">现场音乐</span>
+                    <span class="list">个人/教育类</span>
+                </dd>
+            </dl>
 
-    </div>
+            <dl class="row-type">
+                <dt>请选择授权期限</dt>
+                <dd>
+                    <span class="list active">三个月以内</span>
+                    <span class="list">一年</span>
+                    <span class="list">三年</span>
+                    <span class="list">五年/永久</span>
+                </dd>
+            </dl>
+
+            <div class="row-scope">
+                <dl class="scope-star-time">
+                    <dt>请选择授权开始时间</dt>
+                    <dd>
+                        <span class="list active" id="startime">2018-05-15</span>
+                        <span class="icon-calendar" onClick="WdatePicker({el:'startime'})"></span>
+                    </dd>
+                </dl>
+                <dl class="scope-area">
+                    <dt>请选择授权地区</dt>
+                    <dd>
+                        <span class="list active">中国大陆地区</span>
+                        <span class="list">全球</span>
+                    </dd>
+                </dl>
+            </div>
+
+            <ul class="waiting-money">
+                <li class="r1">待支付价格</li>
+                <li class="r2"><i class="s1">￥</i><i class="s2">9999</i><i class="s3">.00</i></li>
+                <li class="r3">
+                    <a class="btn btn-prev" href="shoppingcar.html">上一步</a>
+                    <a class="btn btn-next" href="payment.html">下一步</a>
+                </li>
+            </ul>
+
+        </article>
+
+    </section>
+
 
 </div>
 </div>
@@ -96,9 +150,21 @@
 
 <script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
 <script type="text/javascript" src="js/myjs.js"></script>
+<script type="text/javascript" src="My97DatePicker/WdatePicker.js"></script>
 <script>
 $(function () {
-
+    /* 展开详情 */
+    $('.header .detail').on('click',function () {
+        var isopen = $(this).closest('.section-cont').hasClass('open');
+        $(this).closest('.section-cont')[isopen?'removeClass':'addClass']('open');
+    });
+    /* 选择音乐用途、授权期限 */
+    $('.row-type .list').on('click',function () {
+        $(this).addClass('active').siblings().removeClass('active');
+    });
+    $('.scope-area .list').on('click',function () {
+        $(this).addClass('active').siblings().removeClass('active');
+    });
 });
 </script>
 </body>

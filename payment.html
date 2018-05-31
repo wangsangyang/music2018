@@ -84,45 +84,55 @@
         </div>
     </header>
 
-
-
     <section class="section-cont">
-        <article class="cont1">
-            <h2>选择支付方式</h2>
-            <dl class="header">
-                <dd class="song-name">Siren Songs  Imaqice Version</dd>
-                <dd class="song-number">等<i class="color">3</i>首作品</dd>
-                <dd class="more">展开详情</dd>
-            </dl>
-            <div class="bodyer">
-                <div class="row1">
-                    <dl class="left">
-                        <dt>可用余额</dt>
-                        <dd><i class="s1">￥</i><i class="s2">999999</i><i class="s3">.00</i></dd>
-                    </dl>
-                    <div class="right">
-                        <dl>
-                            <dt>联系人：</dt>
-                            <dd><input></dd>
-                        </dl>
-                        <dl>
-                            <dt>联系电话：</dt>
-                            <dd><input></dd>
-                        </dl>
-                    </div>
-                </div>
-                <dl class="row2">
-                    <dt>支付方式</dt>
-                    <dd>
-                        <span class="way"><img src="images/icon-balance.png"><i class="text">余额支付</i></span>
-                        <span class="way"><img src="images/icon-zhifubao.png"><i class="text">支付宝支付</i></span>
-                        <span class="way"><img src="images/icon-weixin.png"><i class="text">微信支付</i></span>
-                    </dd>
+        <h2 class="title">选择支付方式</h2>
+        <dl class="header">
+            <dd class="song-name">Siren Songs  Imaqice Version</dd>
+            <dd class="song-number">等<i class="color">3</i>首作品</dd>
+            <dd class="detail">展开详情</dd>
+        </dl>
+        <article class="bodyer">
+            <div class="row-balance">
+                <dl class="left">
+                    <dt>可用余额</dt>
+                    <dd><i class="s1">￥</i><i class="s2">999999</i><i class="s3">.00</i></dd>
                 </dl>
+                <div class="right">
+                    <dl>
+                        <dt>联系人：</dt>
+                        <dd><input></dd>
+                    </dl>
+                    <dl>
+                        <dt>联系电话：</dt>
+                        <dd><input></dd>
+                    </dl>
+                </div>
             </div>
+            <dl class="payment-way">
+                <dt>支付方式</dt>
+                <dd>
+                    <span class="list active"><img src="images/icon-balance.png"><i class="text">余额支付</i></span>
+                    <span class="list"><img src="images/icon-zhifubao.png"><i class="text">支付宝支付</i></span>
+                    <span class="list"><img src="images/icon-weixin.png"><i class="text">微信支付</i></span>
+                </dd>
+            </dl>
+
+            <ul class="pay-money">
+                <li class="r1">付款金额</li>
+                <li class="r2"><i class="s1">￥</i><i class="s2">9999</i><i class="s3">.00</i></li>
+                <li class="r3 xie">
+                    <i class="icon-checkbox active"></i>
+                    <span class="text">已同意<a href="#">《购买音乐须知》</a></span>
+                </li>
+                <li class="r4">
+                    <a class="btn btn-prev" href="waiting-pay.html">上一步</a>
+                    <a class="btn" href="waiting-pay.html">立即支付</a>
+                </li>
+            </ul>
+
         </article>
+
     </section>
-    <div class="bnts-nex"><a class="btn" href="waiting-pay.html">下一步</a></div>
 
 
 </div>
@@ -133,7 +143,20 @@
 <script type="text/javascript" src="js/myjs.js"></script>
 <script>
 $(function () {
-
+    /* 展开详情 */
+    $('.header .detail').on('click',function () {
+        var isopen = $(this).closest('.section-cont').hasClass('open');
+        $(this).closest('.section-cont')[isopen?'removeClass':'addClass']('open');
+    });
+    /* 选择支付方式 */
+    $('.payment-way .list').on('click',function () {
+        $(this).addClass('active').siblings().removeClass('active');
+    });
+    /* 点击同意协议 */
+    $('.icon-checkbox').on('click', function () {
+        var isactive = $(this).hasClass('active');
+        $(this)[isactive?'removeClass':'addClass']('active');
+    });
 });
 </script>
 </body>
