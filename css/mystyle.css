@@ -374,16 +374,70 @@ a{ color: #fff; font-size: 14px; }
 .page-music-album .section-album .left .player-btns .btn{ display: block; width: 19px; height: 17px; position: absolute; top: 0; cursor: pointer; background-repeat: no-repeat; background-position: center; }
 .page-music-album .section-album .left .player-btns .play-prev{ left: 20px; background-image: url(../images/play-prev.png); }
 .page-music-album .section-album .left .player-btns .play-next{ left: 100px; background-image: url(../images/play-next.png); }
-/* 音乐播放器 */
-.myMusicplayer{ position: absolute; left: 38px; top: 164px; }
-.myMusicplayer .myMusicplayer-playpause{ display: block; width: 47px; height: 47px; background-repeat: no-repeat; background-position: center; vertical-align: top; margin: 0 8px; cursor: pointer; }
-.myMusicplayer-stopped .myMusicplayer-playpause{ background-image: url(../images/play-now.png); }
-.myMusicplayer-playing .myMusicplayer-playpause{ background-image: url(../images/play-now-playing.png); }
-.myMusicplayer .myMusicplayer-bar{ position: absolute; top: 19px; left: 123px; display: block; width: 320px; height: 7px; background: url(../images/total-line.png) repeat-x left center; border-radius: 20px; cursor: pointer; }
-.myMusicplayer .myMusicplayer-bar .myMusicplayer-bar-loaded{ height: 100%;}
-.myMusicplayer .myMusicplayer-bar .myMusicplayer-bar-played{ position: absolute; top: 0; height: 7px; background: url(../images/speed-line.png) repeat-x left center; border-radius: 20px; }
-.myMusicplayer .myMusicplayer-bar .myMusicplayer-bar-played:after{ content: ""; display: block; position: absolute; right: -12px; top: -6px; width: 18px; height: 18px; background: url(../images/icon-handle.png) no-repeat center; cursor: pointer; }
-.myMusicplayer .myMusicplayer-time{ display: block; position: absolute; top: 54px; font-size: 12px; color: #7da700;}
-.myMusicplayer .myMusicplayer-time-current{ left: 160px; }
-.myMusicplayer .myMusicplayer-time-duration{ left: 449px; }
-.myMusicplayer .myMusicplayer-volume{ display: none; }
+/* 专辑播放器 */
+.myplayer{ position: absolute; left: 38px; top: 164px; }
+.myplayer .myplayer-playpause{ display: block; width: 47px; height: 47px; position: relative; left: 7px; background-repeat: no-repeat; background-position: center; cursor: pointer; }
+.myplayer-stopped .myplayer-playpause{ background-image: url(../images/play-now.png); }
+.myplayer-playing .myplayer-playpause{ background-image: url(../images/play-now-playing.png); }
+.myplayer .myplayer-bar{ position: absolute; top: 19px; left: 123px; display: block; width: 320px; height: 7px; background: url(../images/total-line.png) repeat-x left center; border-radius: 20px; cursor: pointer; }
+.myplayer .myplayer-bar .myplayer-bar-loaded{ height: 100%;}
+.myplayer .myplayer-bar .myplayer-bar-played{ position: absolute; top: 0; height: 7px; background: url(../images/speed-line.png) repeat-x left center; border-radius: 20px; }
+.myplayer .myplayer-bar .myplayer-bar-played:after{ content: ""; display: block; position: absolute; right: -12px; top: -6px; width: 18px; height: 18px; background: url(../images/icon-handle.png) no-repeat center; cursor: pointer; }
+.myplayer .myplayer-time{ display: block; position: absolute; top: 34px; font-size: 12px; color: #7da700;}
+.myplayer .myplayer-time-current{ left: 118px; }
+.myplayer .myplayer-time-duration{ left: 414px; }
+.myplayer .myplayer-volume{ display: none; }
+
+/* 底部音乐播放器 */
+/*.musicPlayer-wrap{ display: none; position: fixed; bottom: 0; width: 100%; background-color: rgba(17,23,32,1); box-shadow: 0 0 16px #000; }
+.musicPlayer-wrap .player-box{ width: 1200px; margin: auto; position: relative; left: -7px; }
+.musicPlayer-wrap .close{ display: block; width: 20px; height: 20px; position: absolute; right: 35px; top: 10px; background-repeat: no-repeat; background-position: center; background-image: url(../images/close.png); cursor: pointer; }
+.musicPlayer{ padding: 20px 0; height: 87px; }
+.musicPlayer-wrap .player-box .title{ position: absolute; left: 144px; top: 15px; }
+.musicPlayer .musicPlayer-playpause{ display: block; width: 47px; height: 47px; position: absolute; left: 35px; top: 21px; background-repeat: no-repeat; background-position: center; cursor: pointer; }
+.musicPlayer-wrap .player-btns{ position: absolute; top: 35px; left: 0px; }
+.musicPlayer-wrap .player-btns .btn{ display: block; width: 19px; height: 17px; position: absolute; top: 0; cursor: pointer; background-repeat: no-repeat; background-position: center; }
+.musicPlayer-wrap .player-btns .play-prev{ left: 0px; background-image: url(../images/play-prev.png); }
+.musicPlayer-wrap .player-btns .play-next{ left: 100px; background-image: url(../images/play-next.png); }
+.musicPlayer-stopped .musicPlayer-playpause{ background-image: url(../images/play-now.png); }
+.musicPlayer-playing .musicPlayer-playpause{ background-image: url(../images/play-now-playing.png); }
+.musicPlayer .musicPlayer-bar{ position: absolute; top: 50px; left: 150px; display: block; width: 960px; height: 7px; background: url(../images/total-line.png) repeat-x left center; border-radius: 20px; cursor: pointer; }
+.musicPlayer .musicPlayer-bar .musicPlayer-bar-loaded{ height: 100%;}
+.musicPlayer .musicPlayer-bar .musicPlayer-bar-played{ position: absolute; top: 0; height: 7px; background: url(../images/speed-line.png) repeat-x left center; border-radius: 20px; }
+.musicPlayer .musicPlayer-bar .musicPlayer-bar-played:after{ content: ""; display: block; position: absolute; right: -12px; top: -6px; width: 18px; height: 18px; background: url(../images/icon-handle.png) no-repeat center; cursor: pointer; }
+.musicPlayer .musicPlayer-time{ display: block; position: absolute; top: 44px; font-size: 12px; color: #7da700;}
+.musicPlayer .musicPlayer-time-current{ right: 35px; padding-right: 10px; }
+.musicPlayer .musicPlayer-time-current:after{ content: "/"; display: block; position: absolute; right: 0px; top: 0px; }
+.musicPlayer .musicPlayer-time-duration{ right: 0px; }
+.musicPlayer .musicPlayer-volume{ display: none; }*/
+
+
+
+/* 底部音乐播放器 */
+.musicPlayer{ position: fixed; bottom: 0; width: 100%; background-color: rgba(17,23,32,1); box-shadow: 0 0 16px #000; }
+
+.musicPlayer .player-cont{ width: 1200px; margin: auto; position: relative; left: -7px; }
+.musicPlayer .close{ display: block; width: 20px; height: 20px; position: absolute; right: 35px; top: 10px; background-repeat: no-repeat; background-position: center; background-image: url(../images/close.png); cursor: pointer; }
+
+.musicPlayer .aplayer{ padding: 20px 0; height: 87px; background-color: transparent; }
+.musicPlayer .aplayer .aplayer-info{ padding: 0; }
+.musicPlayer .aplayer .aplayer-info .aplayer-controller .aplayer-bar-wrap .aplayer-bar{ background-color: #999; }
+.musicPlayer .aplayer .aplayer-info .aplayer-controller .aplayer-bar-wrap .aplayer-bar .aplayer-played{ background-color: #fff; }
+.musicPlayer .aplayer .aplayer-info .aplayer-controller .aplayer-bar-wrap .aplayer-bar .aplayer-played .aplayer-thumb{ background: #fff; transform: scale(1); }
+.musicPlayer .aplayer .aplayer-info .aplayer-controller .aplayer-time .aplayer-icon:hover path{ fill:#fff; }
+.musicPlayer .aplayer .aplayer-info .aplayer-controller .aplayer-volume-wrap{ }
+.musicPlayer .aplayer .aplayer-info .aplayer-controller .aplayer-time i:before{ display: none; }
+.musicPlayer .aplayer .aplayer-info .aplayer-controller .aplayer-bar-wrap{ margin: 0 10px 0 5px; }
+
+.musicPlayer .aplayer .aplayer-pic img{ display: none; }
+.musicPlayer .aplayer .aplayer-pic .aplayer-button{ display: block; width: 47px; height: 47px; background-repeat: no-repeat; background-position: center; top: 0; left: 0; bottom: auto; right: auto; margin: 0; box-sizing: border-box; }
+.musicPlayer .aplayer .aplayer-pic .aplayer-button svg{ display: none; }
+
+.musicPlayer .aplayer .aplayer-pic .aplayer-play{ background-image: url(../images/play-now.png); }
+.musicPlayer .aplayer .aplayer-pic .aplayer-play.aplayer-hide{ display: none; }
+.musicPlayer .aplayer .aplayer-pic .aplayer-play .aplayer-icon-play{display: none; }
+.musicPlayer .aplayer .aplayer-pic .aplayer-pause{ background-image: url(../images/play-now-playing.png); }
+.musicPlayer .aplayer .aplayer-pic .aplayer-pause.aplayer-hide{ display: none; }
+
+.musicPlayer .aplayer .aplayer-info .aplayer-music .aplayer-author{ display: none; }
+.musicPlayer .aplayer .aplayer-info .aplayer-controller .aplayer-time i{ width: 16px; height: 16px; display: block; background: url(../images/icon-volume.png) no-repeat 0px 0px; background-size: 15px auto; }
