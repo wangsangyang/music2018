@@ -14,7 +14,7 @@ a{ color: #fff; font-size: 14px; }
 .clearfix:after{ content: ""; display: block; clear: both; height: 0; visibility: hidden; }
 
 .page{ min-width: 1200px; position: absolute; left: 0; right: 0; top: 0; bottom: 0; overflow: auto; background-image: url(../images/bg-page1.jpg); background-color: #343946; background-repeat: no-repeat; background-position: center top; background-size: 100% auto; user-select:none; }
-.wrap{ width: 1200px; margin: auto; padding-bottom: 120px; }
+.wrap{ width: 1200px; margin: auto; }
 
 /* 顶部右侧的登录、注册按钮 */
 .section-header{ position: relative; padding-top: 80px; }
@@ -164,6 +164,7 @@ a{ color: #fff; font-size: 14px; }
 
 /* 音乐专辑页 */
 .page-music-album{  }
+.page-music-album .wrap{ padding-bottom: 100px; }
 .page-music-album .main-content{ }
 .page-music-album .search-result{ margin-top: 20px; box-shadow: 0 0 16px #000; background-color: rgba(17,23,32,0.8); }
 .page-music-album .section-album{ height: 265px; margin-top: 55px; }
@@ -396,11 +397,12 @@ a{ color: #fff; font-size: 14px; }
 .musicPlayer.mini .close{ display: none; }
 .musicPlayer.mini  .icon-show{ display: block; }
 .musicPlayer .player-cont{ width: 1200px; margin: auto; position: relative; left: -7px; }
-.musicPlayer .close{ display: block; width: 20px; height: 20px; position: absolute; right: 35px; top: 10px; background-repeat: no-repeat; background-position: center; background-image: url(../images/close.png); cursor: pointer; }
+.musicPlayer .close{ display: block; width: 16px; height: 16px; position: absolute; right: 35px; top: 10px; background-repeat: no-repeat; background-position: center; background-image: url(../images/close.png); background-size: 100% auto; cursor: pointer; }
 .musicPlayer .icon-show{ display: none; width: 20px; height: 100%; position: absolute; right: 0px; top: 0px; background-color: #aaa; background-repeat: no-repeat; background-position: center; background-image: url(../images/icon-show.png); cursor: pointer; z-index: 99; }
 
-.musicPlayer .aplayer{ padding: 20px 0; height: 87px; background-color: transparent; }
+.musicPlayer .aplayer{ padding: 10px 0; height: 70px; background-color: transparent; }
 .musicPlayer .aplayer .aplayer-info{ padding: 0; }
+.musicPlayer .aplayer .aplayer-info .aplayer-music{ height: 16px; padding: 4px 0 0; }
 .musicPlayer .aplayer .aplayer-info .aplayer-controller .aplayer-bar-wrap .aplayer-bar{ background-color: #999; }
 .musicPlayer .aplayer .aplayer-info .aplayer-controller .aplayer-bar-wrap .aplayer-bar .aplayer-played{ background-color: #fff; }
 .musicPlayer .aplayer .aplayer-info .aplayer-controller .aplayer-bar-wrap .aplayer-bar .aplayer-played .aplayer-thumb{ background: #fff; transform: scale(1); }
