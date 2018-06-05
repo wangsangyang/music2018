@@ -425,9 +425,11 @@ a{ color: #fff; font-size: 14px; }
 .musicPlayer .aplayer.aplayer-withlist .aplayer-list{ display: none; position: fixed; top: 0px;  background-color: #aaa; }
 
 .musicPlayer .aplayer.aplayer-withlist .aplayer-info{ border: 0; }
+.musicPlayer .aplayer .aplayer-info .aplayer-controller .aplayer-time .aplayer-icon-play{ display: none; }
 .musicPlayer .aplayer .aplayer-info .aplayer-controller .aplayer-time .aplayer-icon-order{ display: none; }
 .musicPlayer .aplayer .aplayer-info .aplayer-controller .aplayer-time .aplayer-icon.aplayer-icon-loop{ display: none; }
 .musicPlayer .aplayer.aplayer-withlist .aplayer-info .aplayer-controller .aplayer-time .aplayer-icon.aplayer-icon-menu{ display: none; }
+
 
 .musicPlayer .aplayer .aplayer-info .aplayer-controller .aplayer-time{  }
 .musicPlayer .aplayer .aplayer-icon-back{ }

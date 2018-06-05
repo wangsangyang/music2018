@@ -322,6 +322,9 @@
             aplayer.pause();
         }
     });
+    aplayer.on('play',function(a){
+        $( '#myplayer')[0].pause();
+    });
     aplayer.on('pause',function(a){
         console.log(a);
         $('.search-result .tbody li').each(function () {
@@ -355,9 +358,12 @@
             var src = $(this).attr('data-src');
             $( '#myplayer').prop('src',src);
             $( '#myplayer')[0].play();
+            aplayer.pause();
         });
+        $( '#myplayer')[0].onplay = function () {
+            aplayer.pause();
+        };
     });
-
 
 </script>
 </body>
