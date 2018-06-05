@@ -14,7 +14,7 @@ a{ color: #fff; font-size: 14px; }
 .clearfix:after{ content: ""; display: block; clear: both; height: 0; visibility: hidden; }
 
 .page{ min-width: 1200px; position: absolute; left: 0; right: 0; top: 0; bottom: 0; overflow: auto; background-image: url(../images/bg-page1.jpg); background-color: #343946; background-repeat: no-repeat; background-position: center top; background-size: 100% auto; user-select:none; }
-.wrap{ width: 1200px; margin: auto; padding-bottom: 50px; }
+.wrap{ width: 1200px; margin: auto; padding-bottom: 120px; }
 
 /* 顶部右侧的登录、注册按钮 */
 .section-header{ position: relative; padding-top: 80px; }
@@ -133,7 +133,7 @@ a{ color: #fff; font-size: 14px; }
 .search-result .tbody .icon-open{ width: 16px; height: 16px; background-image: url(../images/icon-open.png); }
 .search-result .tbody .col-1 .icon{ position: relative; top: -4px; }
 .search-result .tbody .col-1 .icon-pause{ width: 18px; height: 23px; background-image: url(../images/icon-pause.png); }
-.search-result .tbody .col-1 .icon-pause.active{ background-image: url(../images/icon-pause-active.png); }
+.search-result .tbody .col-1 .icon-pause.active{ background-image: none; background-color: #7da700; border-radius: 2px; width: 16px; height: 16px; left: -2px; }
 .search-result .tbody .col-1 .icon-play{ width: 12px; height: 19px; background-image: url(../images/icon-playing.png); }
 .search-result .tbody .col-1 .icon-checkbox{ width: 12px; height: 12px; border: solid 1px #fff; border-radius: 1px; }
 .search-result .tbody .col-1 .icon-checkbox.active{ border: 0; background-image: url(../images/icon-checkbox-active.png); }
@@ -388,36 +388,16 @@ a{ color: #fff; font-size: 14px; }
 .myplayer .myplayer-time-duration{ left: 414px; }
 .myplayer .myplayer-volume{ display: none; }
 
-/* 底部音乐播放器 */
-/*.musicPlayer-wrap{ display: none; position: fixed; bottom: 0; width: 100%; background-color: rgba(17,23,32,1); box-shadow: 0 0 16px #000; }
-.musicPlayer-wrap .player-box{ width: 1200px; margin: auto; position: relative; left: -7px; }
-.musicPlayer-wrap .close{ display: block; width: 20px; height: 20px; position: absolute; right: 35px; top: 10px; background-repeat: no-repeat; background-position: center; background-image: url(../images/close.png); cursor: pointer; }
-.musicPlayer{ padding: 20px 0; height: 87px; }
-.musicPlayer-wrap .player-box .title{ position: absolute; left: 144px; top: 15px; }
-.musicPlayer .musicPlayer-playpause{ display: block; width: 47px; height: 47px; position: absolute; left: 35px; top: 21px; background-repeat: no-repeat; background-position: center; cursor: pointer; }
-.musicPlayer-wrap .player-btns{ position: absolute; top: 35px; left: 0px; }
-.musicPlayer-wrap .player-btns .btn{ display: block; width: 19px; height: 17px; position: absolute; top: 0; cursor: pointer; background-repeat: no-repeat; background-position: center; }
-.musicPlayer-wrap .player-btns .play-prev{ left: 0px; background-image: url(../images/play-prev.png); }
-.musicPlayer-wrap .player-btns .play-next{ left: 100px; background-image: url(../images/play-next.png); }
-.musicPlayer-stopped .musicPlayer-playpause{ background-image: url(../images/play-now.png); }
-.musicPlayer-playing .musicPlayer-playpause{ background-image: url(../images/play-now-playing.png); }
-.musicPlayer .musicPlayer-bar{ position: absolute; top: 50px; left: 150px; display: block; width: 960px; height: 7px; background: url(../images/total-line.png) repeat-x left center; border-radius: 20px; cursor: pointer; }
-.musicPlayer .musicPlayer-bar .musicPlayer-bar-loaded{ height: 100%;}
-.musicPlayer .musicPlayer-bar .musicPlayer-bar-played{ position: absolute; top: 0; height: 7px; background: url(../images/speed-line.png) repeat-x left center; border-radius: 20px; }
-.musicPlayer .musicPlayer-bar .musicPlayer-bar-played:after{ content: ""; display: block; position: absolute; right: -12px; top: -6px; width: 18px; height: 18px; background: url(../images/icon-handle.png) no-repeat center; cursor: pointer; }
-.musicPlayer .musicPlayer-time{ display: block; position: absolute; top: 44px; font-size: 12px; color: #7da700;}
-.musicPlayer .musicPlayer-time-current{ right: 35px; padding-right: 10px; }
-.musicPlayer .musicPlayer-time-current:after{ content: "/"; display: block; position: absolute; right: 0px; top: 0px; }
-.musicPlayer .musicPlayer-time-duration{ right: 0px; }
-.musicPlayer .musicPlayer-volume{ display: none; }*/
-
-
 
 /* 底部音乐播放器 */
 .musicPlayer{ position: fixed; bottom: 0; width: 100%; background-color: rgba(17,23,32,1); box-shadow: 0 0 16px #000; }
-
+.musicPlayer.mini{ width: 20px; overflow: hidden; }
+.musicPlayer.mini .aplayer .aplayer-pic .aplayer-play{ display: none; }
+.musicPlayer.mini .close{ display: none; }
+.musicPlayer.mini  .icon-show{ display: block; }
 .musicPlayer .player-cont{ width: 1200px; margin: auto; position: relative; left: -7px; }
 .musicPlayer .close{ display: block; width: 20px; height: 20px; position: absolute; right: 35px; top: 10px; background-repeat: no-repeat; background-position: center; background-image: url(../images/close.png); cursor: pointer; }
+.musicPlayer .icon-show{ display: none; width: 20px; height: 100%; position: absolute; right: 0px; top: 0px; background-color: #aaa; background-repeat: no-repeat; background-position: center; background-image: url(../images/icon-show.png); cursor: pointer; z-index: 99; }
 
 .musicPlayer .aplayer{ padding: 20px 0; height: 87px; background-color: transparent; }
 .musicPlayer .aplayer .aplayer-info{ padding: 0; }
@@ -439,5 +419,15 @@ a{ color: #fff; font-size: 14px; }
 .musicPlayer .aplayer .aplayer-pic .aplayer-pause{ background-image: url(../images/play-now-playing.png); }
 .musicPlayer .aplayer .aplayer-pic .aplayer-pause.aplayer-hide{ display: none; }
 
-.musicPlayer .aplayer .aplayer-info .aplayer-music .aplayer-author{ display: none; }
 .musicPlayer .aplayer .aplayer-info .aplayer-controller .aplayer-time i{ width: 16px; height: 16px; display: block; background: url(../images/icon-volume.png) no-repeat 0px 0px; background-size: 15px auto; }
+.musicPlayer .aplayer.aplayer-withlist .aplayer-list{ display: none; position: fixed; top: 0px;  background-color: #aaa; }
+
+.musicPlayer .aplayer.aplayer-withlist .aplayer-info{ border: 0; }
+.musicPlayer .aplayer .aplayer-info .aplayer-controller .aplayer-time .aplayer-icon-order{ display: none; }
+.musicPlayer .aplayer .aplayer-info .aplayer-controller .aplayer-time .aplayer-icon.aplayer-icon-loop{ display: none; }
+.musicPlayer .aplayer.aplayer-withlist .aplayer-info .aplayer-controller .aplayer-time .aplayer-icon.aplayer-icon-menu{ display: none; }
+
+.musicPlayer .aplayer .aplayer-info .aplayer-controller .aplayer-time{  }
+.musicPlayer .aplayer .aplayer-icon-back{ }
+.musicPlayer .aplayer .aplayer-icon-back svg{ }
+.musicPlayer .aplayer .aplayer-icon-back, .musicPlayer .aplayer .aplayer-icon-forward, .musicPlayer .aplayer .aplayer-icon-play{ display: inline-block; }

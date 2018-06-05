@@ -153,11 +153,11 @@
                 </li>
             </ul>
             <ul class="tbody">
-                <li>
-                    <div class="col-1"><i class="icon icon-pause" data-target="musicPlayer" data-src="images/zdqc.mp3"></i></div>
+                <li data-src="images/zdqc.mp3">
+                    <div class="col-1"><i class="icon icon-pause btn-musicPlayer"></i></div>
                     <div class="col-2">
-                        <h3>Siren Songs Imagine Version</h3>
-                        <span>by Jonny Whint.</span>
+                        <h3>纸短情长</h3>
+                        <span>烟把儿乐队</span>
                     </div>
                     <div class="col-3"><i class="icon icon-open"></i></div>
                     <div class="col-4">2:41</div>
@@ -188,11 +188,46 @@
                         </dl>
                     </div>
                 </li>
-                <li>
-                    <div class="col-1"><i class="icon icon-pause" data-target="musicPlayer" data-src="images/qfdy.mp3"></i></div>
+                <li data-src="images/qfdy.mp3">
+                    <div class="col-1"><i class="icon icon-pause btn-musicPlayer" ></i></div>
                     <div class="col-2">
-                        <h3>Siren Songs Imagine Version</h3>
-                        <span>by Jonny Whint.</span>
+                        <h3>情非得已</h3>
+                        <span>庾澄庆</span>
+                    </div>
+                    <div class="col-3"><i class="icon icon-open"></i></div>
+                    <div class="col-4">2:41</div>
+                    <div class="col-5">120</div>
+                    <div class="col-6">
+                        <i class="icon icon-store active"></i>
+                        <i class="icon icon-add"></i>
+                    </div>
+                    <div class="types">
+                        <dl class="key-word">
+                            <dt>关键词</dt>
+                            <dd>
+                                <span class="active">Bright</span>
+                                <span>Vocal</span>
+                                <span>Male</span>
+                                <span>Great</span>
+                                <span>Bright</span>
+                                <span>Bright</span>
+                            </dd>
+                        </dl>
+                        <dl class="version">
+                            <dt>版本</dt>
+                            <dd>
+                                <span>Full</span>
+                                <span>30s</span>
+                                <span>60s</span>
+                            </dd>
+                        </dl>
+                    </div>
+                </li>
+                <li data-src="images/cehngdu.mp3">
+                    <div class="col-1"><i class="icon icon-pause btn-musicPlayer"></i></div>
+                    <div class="col-2">
+                        <h3>成都</h3>
+                        <span>赵雷</span>
                     </div>
                     <div class="col-3"><i class="icon icon-open"></i></div>
                     <div class="col-4">2:41</div>
@@ -232,17 +267,6 @@
 </div>
 </div>
 
-<div class="musicPlayer-wrap">
-    <i class="close"></i>
-    <div class="player-box">
-        <div class="title">成都</div>
-        <div class="player-btns">
-            <span class="btn play-prev"></span>
-            <span class="btn play-next" data-src="images/cehngdu.mp3"></span>
-        </div>
-        <audio id="musicPlayer" src="" preload="auto" style="display: none;"></audio>
-    </div>
-</div>
 
 <script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
 <script type="text/javascript" src="js/myjs.js"></script>
@@ -253,99 +277,85 @@
 
 <div class="musicPlayer">
     <i class="close"></i>
+    <i class="icon-show"></i>
     <div class="player-cont">
         <div id="aplayer" class="aplayer"></div>
     </div>
 </div>
 
 <script>
+    var audio_list = [];
+    $('.search-result .tbody li').each(function () {
+        var $li = $(this);
+        var src = $li.attr('data-src');
+        var title = $li.find('.col-2 h3').text();
+        var author = $li.find('.col-2 span').text();
+        var audio = {
+            name: title,
+            artist: author,
+            url: src,
+        };
+        audio_list.push(audio);
+    });
     var aplayer = new APlayer({
         container: document.getElementById('aplayer'),
         narrow: false,
         autoplay: false,
+        preload: 'auto',
+        //fixed: true,
         theme: '',
         showlrc: false,
-        audio: [
-            {
-                name: '标题',
-                artist: 'artist',
-                url: 'images/cehngdu.mp3',
-            },
-            {
-                name: '标题',
-                artist: 'artist',
-                url: 'images/cehngdu.mp3',
-            }
-        ]
+        audio: audio_list
     });
 
     var $musicPlayer = $('#musicPlayer');
-    $('[data-target="musicPlayer"]').on('click',function () {
-        var src = $(this).attr('data-src');
+    $('.btn-musicPlayer').on('click',function () {
+        var $li = $(this).closest('li');
+        var index = $li.index();
         var isactive = $(this).hasClass('active');
         $(this)[isactive?'removeClass':'addClass']('active');
-        var musicPlayer_src = $musicPlayer.prop('src');
-        console.log(src);
-        console.log(musicPlayer_src);
+        $li.siblings('li').find('.btn-musicPlayer').removeClass('active');
         if(!isactive){/* 如果是暂停 */
-            $('.musicPlayer').removeClass('musicPlayer-stopped').addClass('musicPlayer-playing');
-            $('.musicPlayer-wrap').show();
-            if(musicPlayer_src!=src){//如果未播放过，则替换src在播放
-                $musicPlayer.prop('src',src);
-            }
+            aplayer.list.switch(index);
             aplayer.play();
         }else{
-            $('.musicPlayer').removeClass('musicPlayer-playing').addClass('musicPlayer-stopped');
             aplayer.pause();
         }
+    });
+    aplayer.on('pause',function(a){
+        console.log(a);
+        $('.search-result .tbody li').each(function () {
+            var $li = $(this);
+            $li.find('.btn-musicPlayer').removeClass('active');
+        });
+    });
+    $( function() {
+        /* 关闭底部音乐播放器 */
+        $( '.musicPlayer .close').on('click',function () {
+            aplayer.pause();
+            $( '.musicPlayer').addClass('mini');
+        });
+        /* 展开底部音乐播放器 */
+        $( '.musicPlayer .icon-show').on('click',function () {
+            $( '.musicPlayer').removeClass('mini');
+        });
     });
 
     $( function() {
         /* 专辑播放器 */
-        $( '#myplayer' ).audioPlayer({
+        $( '#myplayer').audioPlayer({
             src:'images/cehngdu.mp3',
             classPrefix: 'myplayer',
             strPlay: '',
             strPause: '',
             strVolume: 'Volume'
         });
-        $( '.section-album .player-btns .btn' ).on('click',function () {
+        //播放上一首、下一首
+        $( '.section-album .player-btns .btn').on('click',function () {
             var src = $(this).attr('data-src');
             $( '#myplayer').prop('src',src);
             $( '#myplayer')[0].play();
         });
-    });
-
-    $( function() {
-        /* 底部音乐播放器 */
-        var $musicPlayer = $('#musicPlayer');
-        $musicPlayer.audioPlayer({
-            classPrefix: 'musicPlayer',
-            strPlay: '',
-            strPause: '',
-            strVolume: 'Volume'
-        });
-        $('[data-target="musicPlayer"]').on('click',function () {
-            var src = $(this).attr('data-src');
-            var isactive = $(this).hasClass('active');
-            $(this)[isactive?'removeClass':'addClass']('active');
-            var musicPlayer_src = $musicPlayer.prop('src');
-            console.log(src);
-            console.log(musicPlayer_src);
-            if(!isactive){/* 如果是暂停 */
-                $('.musicPlayer').removeClass('musicPlayer-stopped').addClass('musicPlayer-playing');
-                $('.musicPlayer-wrap').show();
-                if(musicPlayer_src!=src){//如果未播放过，则替换src在播放
-                    $musicPlayer.prop('src',src);
-                }
-                $musicPlayer[0].play();
-                $musicPlayer.audioPlayer();
-            }else{
-                $('.musicPlayer').removeClass('musicPlayer-playing').addClass('musicPlayer-stopped');
-                $musicPlayer[0].pause();
-            }
-        });
-
     });
 
 
