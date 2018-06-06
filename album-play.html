@@ -284,55 +284,57 @@
 </div>
 
 <script>
-    var audio_list = [];
-    $('.search-result .tbody li').each(function () {
-        var $li = $(this);
-        var src = $li.attr('data-src');
-        var title = $li.find('.col-2 h3').text();
-        var author = $li.find('.col-2 span').text();
-        var audio = {
-            name: title,
-            artist: author,
-            url: src,
-        };
-        audio_list.push(audio);
-    });
-    var aplayer = new APlayer({
-        container: document.getElementById('aplayer'),
-        narrow: false,
-        autoplay: false,
-        preload: 'auto',
-        //fixed: true,
-        theme: '',
-        showlrc: false,
-        audio: audio_list
-    });
-
-    var $musicPlayer = $('#musicPlayer');
-    $('.btn-musicPlayer').on('click',function () {
-        var $li = $(this).closest('li');
-        var index = $li.index();
-        var isactive = $(this).hasClass('active');
-        $(this)[isactive?'removeClass':'addClass']('active');
-        $li.siblings('li').find('.btn-musicPlayer').removeClass('active');
-        if(!isactive){/* 如果是暂停 */
-            aplayer.list.switch(index);
-            aplayer.play();
-        }else{
-            aplayer.pause();
-        }
-    });
-    aplayer.on('play',function(a){
-        $( '#myplayer')[0].pause();
-    });
-    aplayer.on('pause',function(a){
-        console.log(a);
+    $(function () {
+        var audio_list = [];
         $('.search-result .tbody li').each(function () {
             var $li = $(this);
-            $li.find('.btn-musicPlayer').removeClass('active');
+            var src = $li.attr('data-src');
+            var title = $li.find('.col-2 h3').text();
+            var author = $li.find('.col-2 span').text();
+            var audio = {
+                name: title,
+                artist: author,
+                url: src,
+            };
+            audio_list.push(audio);
         });
-    });
-    $( function() {
+        console.log(audio_list);
+        var aplayer = new APlayer({
+            container: document.getElementById('aplayer'),
+            narrow: false,
+            autoplay: false,
+            preload: 'auto',
+            //fixed: true,
+            theme: '',
+            showlrc: false,
+            audio: audio_list
+        });
+
+        var $musicPlayer = $('#musicPlayer');
+        $('.btn-musicPlayer').on('click',function () {
+            var $li = $(this).closest('li');
+            var index = $li.index();
+            var isactive = $(this).hasClass('active');
+            $(this)[isactive?'removeClass':'addClass']('active');
+            $li.siblings('li').find('.btn-musicPlayer').removeClass('active');
+            /* 如果是暂停 */
+            if(!isactive){
+                aplayer.list.switch(index);
+                aplayer.play();
+            }else{
+                aplayer.pause();
+            }
+        });
+        aplayer.on('play',function(a){
+            $( '#myplayer')[0].pause();
+        });
+        aplayer.on('pause',function(a){
+            console.log(a);
+            $('.search-result .tbody li').each(function () {
+                var $li = $(this);
+                $li.find('.btn-musicPlayer').removeClass('active');
+            });
+        });
         /* 关闭底部音乐播放器 */
         $( '.musicPlayer .close').on('click',function () {
             aplayer.pause();
