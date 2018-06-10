@@ -272,6 +272,9 @@
 <script type="text/javascript" src="js/myjs.js"></script>
 <script type="text/javascript" src="js/audioplayer.js"></script>
 
+
+<script type="text/javascript" src="js/fly.js"></script>
+
 <link rel="stylesheet" href="js/APlayer.min.css">
 <script src="js/APlayer.min.js"></script>
 
@@ -367,6 +370,26 @@
         };
     });
 
+    $(function() {
+        var offset = $(".section-top .right .shopingcar").offset();
+        $(".icon-add").click(function(event) {
+            var flyer = $('<img class="flyer-img" src="../images/icon-zhuan.png">'); //抛物体对象
+            flyer.fly({
+                start: {
+                    left: event.pageX,//抛物体起点横坐标
+                    top: event.pageY //抛物体起点纵坐标
+                },
+                end: {
+                    left: offset.left + 10,//抛物体终点横坐标
+                    top: offset.top + 10, //抛物体终点纵坐标
+                },
+                onEnd: function() {
+                    flyer.remove();
+                    this.destory(); //销毁抛物体
+                }
+            });
+        });
+    });
 </script>
 </body>
 </html>
