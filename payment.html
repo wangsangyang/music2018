@@ -86,11 +86,19 @@
 
     <section class="section-cont">
         <h2 class="title">选择支付方式</h2>
-        <dl class="header">
-            <dd class="song-name">Siren Songs  Imaqice Version</dd>
-            <dd class="song-number">等<i class="color">3</i>首作品</dd>
-            <dd class="detail">展开详情</dd>
-        </dl>
+        <ul class="songs">
+            <span class="detail">展开详情</span>
+            <li class="song">
+                <span class="song-name">Siren Songs  Imaqice Version</span>
+                <span class="song-number">等<i class="color">3</i>首作品</span>
+            </li>
+            <li class="song">
+                <span class="song-name">Siren Songs  Imaqice Version</span>
+            </li>
+            <li class="song">
+                <span class="song-name">Siren Songs  Imaqice Version</span>
+            </li>
+        </ul>
         <article class="bodyer">
             <div class="row-balance">
                 <dl class="left">
@@ -144,9 +152,9 @@
 <script>
 $(function () {
     /* 展开详情 */
-    $('.header .detail').on('click',function () {
-        var isopen = $(this).closest('.section-cont').hasClass('open');
-        $(this).closest('.section-cont')[isopen?'removeClass':'addClass']('open');
+    $('.songs .detail').on('click',function () {
+        var isopen = $(this).closest('.songs').hasClass('open');
+        $(this).closest('.songs')[isopen?'removeClass':'addClass']('open');
     });
     /* 选择支付方式 */
     $('.payment-way .list').on('click',function () {
