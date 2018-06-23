@@ -213,13 +213,13 @@ a{ color: #fff; font-size: 14px; }
 .page-authorization-success .section-cont1 .cont1 .bodyer dl dt{ padding-right: 25px; }
 .page-authorization-success .section-cont1 .cont1 .bodyer dl a{ margin: 0 6px; }
 .page-authorization-success .section-cont1 .cont1 .bodyer dl .btn2{ display: inline-block; padding: 0 15px; height: 28px; line-height: 26px; text-align: center; border: solid 1px #7da700; color: #7da700; border-radius: 15px; }
-.page-authorization-success .section-cont1 .cont1 .bodyer dl .btn3{ display: inline-block; padding: 0 15px; height: 28px; line-height: 26px; text-align: center; border: solid 1px #7da700; color: #fff; border-radius: 15px; }
+.page-authorization-success .section-cont1 .cont1 .bodyer dl .btn3{ display: inline-block; padding: 0 15px; height: 28px; line-height: 26px; text-align: center; border: solid 1px #7da700; color: #7da700; border-radius: 15px; }
 .page-authorization-success .section-cont1 .search-result .thead .col-4{ width: 130px; }
 .page-authorization-success .section-cont1 .search-result .thead .col-5{ padding-left: 26px; }
 .page-authorization-success .section-cont1 .search-result .thead .col-6{ width: 290px; }
 .page-authorization-success .section-cont1 .search-result .tbody .col-4{ width: 130px; }
 .page-authorization-success .section-cont1 .search-result .tbody .col-6{ width: 290px; }
-.page-authorization-success .section-cont1 .search-result .tbody .col-6 .tag{ display: inline-block; padding: 0 22px; background-color: #7da700; border-radius: 15px; height: 24px; line-height: 24px; margin: 0 6px; }
+.page-authorization-success .section-cont1 .search-result .tbody .col-6 .tag{ display: inline-block; padding: 0 22px; background-color: #7da700; border-radius: 15px; height: 24px; line-height: 24px; margin: 0 6px; cursor: pointer; }
 
 /* 个人中心 */
 .personalCenter-wrap{ width: 1200px; margin-top: 60px; padding-left: 205px; background-color: rgba(17,23,32,0.8); position: absolute; top: 120px; bottom: 50px; left: 50%; margin-left: -600px; }
@@ -443,3 +443,40 @@ a{ color: #fff; font-size: 14px; }
 .musicPlayer .aplayer .aplayer-icon-back{ }
 .musicPlayer .aplayer .aplayer-icon-back svg{ }
 .musicPlayer .aplayer .aplayer-icon-back, .musicPlayer .aplayer .aplayer-icon-forward, .musicPlayer .aplayer .aplayer-icon-play{ display: inline-block; }
+
+
+
+
+/* 关于我们 */
+.page-aboutus{ background-image: url(../images/bg-page1.jpg); }
+.page-aboutus .personalCenter-main{ padding: 140px 80px 0; background: url(../images/bg-about.png) no-repeat right 30%; }
+.page-aboutus .personalCenter-main{  }
+.page-aboutus .personalCenter-main .row1{ color: #7da700; font-size: 27px; }
+.page-aboutus .personalCenter-main .row2{ font-size: 27px; padding-top: 8px; }
+.page-aboutus .personalCenter-main .row3{ font-size: 16px; padding-top: 30px; }
+.page-aboutus .personalCenter-main .row4{ font-size: 16px; padding-top: 12px; }
+
+/* 授权查询 */
+.page-authorization-search{ background-image: url(../images/bg-page1.jpg); }
+.page-authorization-search .personalCenter-main{ padding: 50px 0 0 120px; background: url(../images/bg-about.png) no-repeat right 30%; }
+.page-authorization-search .personalCenter-main{  }
+.page-authorization-search .personalCenter-main .row1{ font-size: 38px; }
+.page-authorization-search .personalCenter-main .row2{ font-size: 16px; padding-top: 15px; }
+.page-authorization-search .personalCenter-main .row2 .color{ font-size: 16px; color: #7da700; display: inline-block; margin: 0 12px; }
+.page-authorization-search .personalCenter-main .row3{ padding-top: 45px; }
+.page-authorization-search .personalCenter-main .search-box{ height: 78px; }
+.page-authorization-search .personalCenter-main .search-box .search-key{ display: block; float: left; width: 555px; height: 100%; border: solid 1px #7da700; background-color: rgba(17,23,32,0.8); color: #fff; font-size: 22px; padding: 0 15px; }
+.page-authorization-search .personalCenter-main .search-box .search-key::-webkit-input-placeholder{ color: rgba(255,255,255,0.2); }
+.page-authorization-search .personalCenter-main .search-box .search-btn{ display: block; float: left; width: 140px; height: 100%; background-color: #9abb00; color: #fff; font-size: 20px; cursor: pointer; text-align: center; border: 0; }
+
+.page-authorization-search-result .search-result .thead .col-5{ text-align: center; }
+.page-authorization-search-result .search-result .tbody .col-5{ text-align: center; }
+
+/* 已购买音乐 */
+.page-purchased-music .search-result .thead .col-2{ width: 335px; }
+.page-purchased-music .search-result .tbody .col-2{ width: 335px; }
+.page-purchased-music .search-result .thead .col-4{ width: 95px; }
+.page-purchased-music .search-result .tbody .col-4{ width: 95px; }
+.page-purchased-music .search-result .thead .col-6{ width: 270px; }
+.page-purchased-music .search-result .tbody .col-6{ width: 270px; }
+.page-purchased-music .search-result .tbody .col-6 .tag{ display: inline-block; padding: 0 22px; background-color: #7da700; border-radius: 15px; height: 24px; line-height: 24px; margin: 0 6px; cursor: pointer; }
