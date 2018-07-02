@@ -480,3 +480,12 @@ a{ color: #fff; font-size: 14px; }
 .page-purchased-music .search-result .thead .col-6{ width: 270px; }
 .page-purchased-music .search-result .tbody .col-6{ width: 270px; }
 .page-purchased-music .search-result .tbody .col-6 .tag{ display: inline-block; padding: 0 22px; background-color: #7da700; border-radius: 15px; height: 24px; line-height: 24px; margin: 0 6px; cursor: pointer; }
+
+
+
+.page-music-album .section-album .right .row-4{ position: relative; }
+.page-music-album .section-album .right .row-4 .slide{ position: absolute; width: 278px; top: -15px; left: 44px; }
+.page-music-album .section-album .right .row-4 .slide .irs-line{ display: block; height: 6px; border: 0; background: url(../images/total-line.png) repeat-x left center; border-radius: 20px; }
+.page-music-album .section-album .right .row-4 .slide .irs-bar{ height: 10px; border: 0; top: 31px; background: url(../images/speed-line.png) repeat-x left center; border-radius: 20px; }
+.page-music-album .section-album .right .row-4 .slide .irs-bar-edge{ height: 10px; border: 0; top: 31px; left: 2px; background: url(../images/speed-line.png) repeat-x left center; border-radius: 20px; }
+.page-music-album .section-album .right .row-4 .slide .irs-slider{ display: block; width: 18px; height: 18px; border: 0; background: url(../images/icon-handle.png) no-repeat center; position: absolute; top: 27px; left: 0px; cursor: pointer; }
