@@ -134,7 +134,7 @@
                 </li>
                 <li class="r4">
                     <a class="btn btn-prev" href="waiting-pay.html">上一步</a>
-                    <a class="btn" href="waiting-pay.html">立即支付</a>
+                    <a class="btn" href="javascript:;">立即支付</a>
                 </li>
             </ul>
 
@@ -145,6 +145,69 @@
 
 </div>
 </div>
+
+<!-- 微信支付 -->
+<div class="myModal weixinPayModal show" id="weixinPayModal">
+    <i class="opacity-bg"></i>
+    <div class="container">
+        <!--<i class="close">×</i>-->
+        <div class="header"><span class="title">微信支付</span></div>
+        <div class="bodyer clearfix">
+            <div class="e-left"><img src="images/ewm-pay.gif" width="130" height="130"></div>
+            <div class="e-right">
+                <p class="p2">微信扫一扫付款<i class="color">900</i>元</p>
+                <p class="p3">如有问题请拨打热线400-9988-211</p>
+                <p class="p-btn"><a class="btn-next" href="#">完成支付</a></p>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- end 微信支付 -->
+
+<!-- 支付宝支付 -->
+<div class="myModal zhifubaoPayModal " id="zhifubaoPayModal">
+    <i class="opacity-bg"></i>
+    <div class="container">
+        <div class="header"><span class="title">支付宝支付</span></div>
+        <div class="bodyer clearfix">
+            <p class="p1">正在支付中...</p>
+            <p class="p2">支付完成前，请不要关闭此支付验证窗口。</p>
+            <p class="p-btn">
+                <a class="btn-next" href="#">完成支付</a>
+            </p>
+        </div>
+    </div>
+</div>
+<!-- end 支付宝支付 -->
+<style>
+    .myModal{ display: none; width: 100%; height: 100%; position: fixed; top: 0; left: 0; z-index: 999999; font-size: 14px; font-family:"Microsoft Yahei","微软雅黑"; }
+    .myModal.show{ display: block; }
+    .myModal .close{ display: block; width: 20px; height: 20px; line-height: 20px; position: absolute; top: 5px; right: 5px; z-index: 1; color: #eee; font-style: normal; font-weight: normal; font-size: 24px; text-align: center; cursor: pointer; opacity: 1; text-shadow: none; }
+    .myModal .opacity-bg{ display: block; width: 100%; height: 100%; position: absolute; top: 0; left: 0; background-color: #000; opacity: 0.5; filter: alpha(opacity=50); z-index: 0; }
+    .myModal .container{ width: 500px; position: absolute; top: 20%; left: 50%; margin-left: -175px; z-index: 1; padding: 0px; background-color: #9abb00; }
+    .myModal .header{ color: #fff; padding: 9px 10px 12px; font-size: 15px; }
+    .myModal .bodyer{ padding: 15px 10px; font-size: 15px; background-color: #fff; }
+    .myModal .btn-next{ display: inline-block; line-height: 40px; padding: 0 42px; background-color: #9abb00; color: #fff; border-radius: 2px; }
+
+    /*支付宝支付弹窗*/
+    #zhifubaoPayModal .container{ width: 350px; color: #777; }
+    #zhifubaoPayModal .bodyer{ padding: 20px 0 25px 50px; }
+    #zhifubaoPayModal .p1{ font-size: 20px; padding-bottom: 10px; }
+    #zhifubaoPayModal .p2{ font-size: 14px; }
+    #zhifubaoPayModal .p-btn{ margin-top: 18px; }
+    #zhifubaoPayModal .p-btn a{ margin-left: 70px; line-height: 30px; padding: 0 20px; }
+
+    /*微信支付弹窗*/
+    #weixinPayModal .container{ width: 400px; }
+    #weixinPayModal .bodyer{ padding: 25px 0 25px 20px; }
+    #weixinPayModal .e-left{ float: left; }
+    #weixinPayModal .e-right{ float: left; padding: 0px 0 0 20px; color: #777; }
+    #weixinPayModal .e-right .p2{ margin: 10px 0; }
+    #weixinPayModal .e-right .p2 .color{ display: inline-block; padding: 0 4px; font-size: 18px; }
+    #weixinPayModal .e-right .p3{ font-size: 12px; color: #999; margin-top: 10px; }
+    #weixinPayModal .e-right .p-btn{ margin-top: 20px; text-align: center; }
+    #weixinPayModal .e-right .p-btn a{ line-height: 28px; padding: 0 15px; font-size: 12px; }
+</style>
 
 
 <script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
