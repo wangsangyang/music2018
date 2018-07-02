@@ -482,7 +482,7 @@ a{ color: #fff; font-size: 14px; }
 .page-purchased-music .search-result .tbody .col-6 .tag{ display: inline-block; padding: 0 22px; background-color: #7da700; border-radius: 15px; height: 24px; line-height: 24px; margin: 0 6px; cursor: pointer; }
 
 
-
+.page-music-album .section-album .right .row-4 .info{ position: absolute; left: 338px; }
 .page-music-album .section-album .right .row-4{ position: relative; }
 .page-music-album .section-album .right .row-4 .slide{ position: absolute; width: 278px; top: -15px; left: 44px; }
 .page-music-album .section-album .right .row-4 .slide .irs-line{ display: block; height: 6px; border: 0; background: url(../images/total-line.png) repeat-x left center; border-radius: 20px; }
