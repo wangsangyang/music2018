@@ -492,6 +492,7 @@ a{ color: #fff; font-size: 14px; }
 .page-register .section-register .r-xie .icon-checkbox.active{ border: 0; background-image: url(../images/icon-checkbox-active.png); }
 .page-register .section-register .r-xie a{ color: #7da700; text-decoration: underline; }
 
+.page-payment .section-cont .waiting-money{ top: 240px; }
 .page-payment .section-cont .waiting-money .r-xie .icon-checkbox{ display: inline-block; width: 12px; height: 12px; border: solid 1px #fff; border-radius: 1px; margin-right: 5px; }
 .page-payment .section-cont .waiting-money .r-xie .icon-checkbox.active{ border: 0; background-image: url(../images/icon-checkbox-active.png); }
 .page-payment .section-cont .waiting-money .r-xie a{ color: #7da700; text-decoration: underline; }
