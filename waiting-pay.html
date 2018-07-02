@@ -140,6 +140,10 @@
             <ul class="waiting-money">
                 <li class="r1">待支付价格</li>
                 <li class="r2"><i class="s1">￥</i><i class="s2">9999</i><i class="s3">.00</i></li>
+                <li class="r-xie">
+                    <i class="icon-checkbox active"></i>
+                    <span class="text">已同意<a href="#">《购买音乐须知》</a></span>
+                </li>
                 <li class="r3">
                     <a class="btn btn-prev" href="shoppingcar.html">上一步</a>
                     <a class="btn btn-next" href="payment.html">下一步</a>
@@ -170,6 +174,12 @@ $(function () {
     });
     $('.scope-area .list').on('click',function () {
         $(this).addClass('active').siblings().removeClass('active');
+    });
+
+    /* 点击同意协议 */
+    $('.icon-checkbox').on('click', function () {
+        var isactive = $(this).hasClass('active');
+        $(this)[isactive?'removeClass':'addClass']('active');
     });
 });
 </script>

@@ -482,6 +482,20 @@ a{ color: #fff; font-size: 14px; }
 .page-purchased-music .search-result .tbody .col-6 .tag{ display: inline-block; padding: 0 22px; background-color: #7da700; border-radius: 15px; height: 24px; line-height: 24px; margin: 0 6px; cursor: pointer; }
 
 
+
+
+
+
+
+.page-register .section-register .r-xie{ text-align: center; padding: 30px 0 0; margin-bottom: -20px; }
+.page-register .section-register .r-xie .icon-checkbox{ display: inline-block; width: 12px; height: 12px; border: solid 1px #fff; border-radius: 1px; margin: 0 5px 0 -40px; }
+.page-register .section-register .r-xie .icon-checkbox.active{ border: 0; background-image: url(../images/icon-checkbox-active.png); }
+.page-register .section-register .r-xie a{ color: #7da700; text-decoration: underline; }
+
+.page-payment .section-cont .waiting-money .r-xie .icon-checkbox{ display: inline-block; width: 12px; height: 12px; border: solid 1px #fff; border-radius: 1px; margin-right: 5px; }
+.page-payment .section-cont .waiting-money .r-xie .icon-checkbox.active{ border: 0; background-image: url(../images/icon-checkbox-active.png); }
+.page-payment .section-cont .waiting-money .r-xie a{ color: #7da700; text-decoration: underline; }
+/* 拖拽、释放 */
 .page-music-album .section-album .right .row-4 .info{ position: absolute; left: 338px; }
 .page-music-album .section-album .right .row-4{ position: relative; }
 .page-music-album .section-album .right .row-4 .slide{ position: absolute; width: 278px; top: -15px; left: 44px; }
